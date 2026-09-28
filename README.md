@@ -22,7 +22,7 @@
   <sub>PostgreSQL · Prisma · Zod · Docker</sub>
 </p>
 
-Mon travail relie **l’expérience utilisateur et le développement full-stack** : comprendre ce qui bloque, concevoir le parcours, puis construire les interfaces, les API et les données qui le font fonctionner. Mon expérience en relation client, en achats et en coordination d’équipes m’aide à poser les bonnes questions et à tenir compte des contraintes du quotidien.
+Mon travail relie **l’expérience utilisateur et le développement full-stack** : comprendre ce qui bloque, concevoir le parcours, puis développer les interfaces, les API et le modèle de données qui le font fonctionner. Mon expérience en relation client, en achats et en coordination d’équipes m’aide à poser les bonnes questions et à tenir compte des contraintes du quotidien.
 
 ## Deux projets, des choix concrets
 
