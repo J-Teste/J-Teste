@@ -60,7 +60,7 @@ Chez Marcel, j’ai développé des fonctionnalités et des formulaires dans une
 
 ## Mon activité GitHub
 
-<a href="https://github.com/J-Teste?tab=overview"><img src="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics.svg?v=20260928-brand" alt="Activité GitHub du 28 septembre 2025 au 28 septembre 2026 : 1 076 contributions réparties sur 100 jours actifs, contributions publiques et privées incluses. Relevé au 28 septembre 2026." width="100%"></a>
+<a href="https://github.com/J-Teste?tab=overview"><img src="https://raw.githubusercontent.com/J-Teste/J-Teste/ac6b2282c5bc97ac02dfb8654386d35c0301b0e2/profile-metrics.svg" alt="Activité GitHub du 28 septembre 2025 au 28 septembre 2026 : 1 076 contributions réparties sur 100 jours actifs, contributions publiques et privées incluses. Relevé au 28 septembre 2026." width="100%"></a>
 
 <sub>Une partie de mon travail vit dans des dépôts privés. Les études de cas donnent à voir les problèmes abordés, mes décisions et le résultat.</sub>
 
