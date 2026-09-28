@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="326" viewBox="0 0 1100 326" role="img" aria-labelledby="title desc">
+<title id="title">Marcel — construire avec une équipe</title>
+<desc id="desc">Développement full-stack chez Marcel, stage d’avril à septembre 2026. Développement de fonctionnalités et de formulaires dans une application déjà en production, avec des pull requests et des revues de code en équipe.</desc>
+<rect x=".5" y=".5" width="1099" height="325" rx="18" fill="#111113" stroke="#343437"/>
+<path d="M336 42v242" stroke="#363638"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="42" y="48" fill="#d9cda4" font-size="13" letter-spacing="1.6">03 / EXPÉRIENCE EN ÉQUIPE</text>
+<text x="40" y="131" fill="#f4f3ef" font-size="65" font-weight="600" letter-spacing="-2.7">Marcel</text>
+<text x="43" y="168" fill="#c7c7c8" font-size="20">Développement full-stack</text>
+<text x="43" y="213" fill="#aaa9ad" font-size="15">Stage · avril–septembre 2026</text>
+<path d="M44 246h30" stroke="#d9cda4" stroke-width="2"/>
+<text x="43" y="281" fill="#d9cda4" font-size="16">Mon parcours ↗</text>
+<text x="380" y="86" fill="#f4f3ef" font-size="40" font-weight="600" letter-spacing="-1.2">Faire évoluer</text>
+<text x="380" y="133" fill="#f4f3ef" font-size="40" font-weight="600" letter-spacing="-1.2">un produit déjà utilisé.</text>
+<text x="382" y="183" fill="#c7c7c8" font-size="19">J’ai développé des fonctionnalités et des formulaires</text>
+<text x="382" y="210" fill="#c7c7c8" font-size="19">pour une application déjà entre les mains des utilisateurs.</text>
+<g fill="#1d1d20" stroke="#3b3b3e">
+<rect x="381" y="249" width="166" height="37" rx="7"/>
+<rect x="559" y="249" width="182" height="37" rx="7"/>
+<rect x="753" y="249" width="232" height="37" rx="7"/>
+</g>
+<g fill="none" stroke="#d9cda4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<rect x="396" y="260" width="15" height="11" rx="2"/><path d="M403.5 271v4m-4 0h8"/>
+<circle cx="578" cy="260" r="2.4"/><circle cx="578" cy="275" r="2.4"/><path d="M578 262.4v10.2m6-13h2a4 4 0 0 1 4 4v8m-3-2 3 3 3-3"/>
+<path d="M772 259h13v11h-7l-4 4v-4h-2z"/><path d="m775 264 2 2 4-4"/>
+</g>
+<text x="422" y="273" fill="#dddce0" font-size="15">En production</text>
+<text x="600" y="273" fill="#dddce0" font-size="15">Pull requests</text>
+<text x="797" y="273" fill="#dddce0" font-size="15">Revues de code</text>
+</g>
+</svg>
