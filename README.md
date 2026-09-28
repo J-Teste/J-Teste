@@ -1,8 +1,7 @@
 # Jason TESTÉ
+**Full-stack developer · web applications & game systems**
 
-**Student developer at 42 Mulhouse**
-
-I build web applications and game systems, with contributions across backend progression features and frontend authentication flows.
+I work across backend progression systems and frontend authentication flows.
 
 ## Selected work
 
