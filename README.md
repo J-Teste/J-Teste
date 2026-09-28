@@ -62,11 +62,16 @@ Avant le code, j’ai travaillé au contact des clients, géré des achats et co
 
 <p>
   <a href="https://github.com/J-Teste#js-contribution-activity-description">
-    <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/282d7baa69566db69b3fb868f13db08560978a95/profile-metrics.svg" alt="Activité GitHub du 28 septembre 2025 au 28 septembre 2026 : 1 105 contributions réparties sur 100 jours actifs, contributions publiques et privées incluses. Relevé au 28 septembre 2026." width="100%">
+    <picture>
+      <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/4c30ae9e51b535233e8a5ac262c51ef7005a9239/profile-metrics-mobile.svg">
+      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/4c30ae9e51b535233e8a5ac262c51ef7005a9239/profile-metrics.svg" alt="Activité GitHub du 28 septembre 2025 au 28 septembre 2026 : 1 105 contributions réparties sur 100 jours actifs, contributions publiques et privées incluses. Relevé au 28 septembre 2026." width="100%">
+    </picture>
   </a>
 </p>
 
-<p><sub>Une partie du code est privée. Mes <a href="https://www.jasonteste.com/#projets">études de cas</a> montrent les problèmes abordés, les choix et les résultats.</sub></p>
+<h3 align="center">Une partie du code est privée.</h3>
+
+<p align="center">Mes <a href="https://www.jasonteste.com/#projets"><strong>études de cas</strong></a> montrent les problèmes abordés, les choix et les résultats.</p>
 
 <p>
   <a href="https://www.linkedin.com/in/jteste/">
