@@ -4,65 +4,60 @@
 
 <p align="center">
   <a href="https://www.jasonteste.com/"><strong>PORTFOLIO ↗</strong></a>
-  &nbsp;·&nbsp;
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://www.jasonteste.com/assets/cv.pdf">CV ↗</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/jteste/">LINKEDIN ↗</a>
 </p>
 
 <p align="center">
-  Développeur full-stack à Mulhouse<br>
-  <sub>React · TypeScript · Next.js · tRPC · PostgreSQL</sub>
+  Je transforme des besoins parfois flous en applications simples à utiliser,<br>
+  fiables et prêtes à servir au quotidien.
 </p>
 
----
+<p align="center">
+  <a href="https://github.com/J-Teste#js-contribution-activity-description">
+    <img src="./profile-metrics.svg" alt="Au 28 septembre 2026 : plus de 1 100 contributions GitHub en douze mois, deux études de cas et un site client déployé et maintenu" width="100%">
+  </a>
+</p>
 
-### Projet mis en ligne
+## Projets choisis
 
-## AzzaProd · site vitrine bilingue
+### 01 / AzzaProd — un studio qu’on comprend dès le premier écran
 
-[Étude de cas ↗](https://www.jasonteste.com/projects/azzaprod) · [Voir le site ↗](https://azzaprod.com/)
+**En ligne · Site client bilingue · Déployé et maintenu**
 
-Le studio avait déjà un site, mais son travail passait au second plan. J’ai repensé la vitrine pour que ses images parlent immédiatement.
+<a href="https://www.jasonteste.com/projects/azzaprod"><img src="https://www.jasonteste.com/projects/azzaprod.jpg" alt="Aperçu du site AzzaProd, avec la vidéo et les réalisations du studio au premier plan" width="100%"></a>
 
-J’ai clarifié le besoin, conçu la nouvelle expérience, puis livré le site bilingue en production — avec le formulaire de contact, le domaine et l’e-mail configurés.
+Le studio avait déjà un site, mais ses réalisations passaient au second plan. J’ai mené l’audit UX, repensé le parcours, construit la vitrine en français et en anglais, puis pris en charge sa mise en ligne. L’équipe peut ajouter ses projets sans reconstruire les pages ; un problème d’envoi ne fait pas perdre la demande de contact.
 
-<sub>MON RÔLE</sub> Audit UX · Direction produit · Développement full-stack · Mise en production
+`Next.js` · `React` · `TypeScript` · `i18n` · `OVH` · `SMTP`
 
-<sub>STACK</sub> `Next.js` `React` `TypeScript` `i18n` `OVH` `SMTP`
+**[Lire l’étude de cas ↗](https://www.jasonteste.com/projects/azzaprod)** &nbsp;·&nbsp; [Voir le site ↗](https://azzaprod.com/)
 
----
+### 02 / Atelier Bozoïde — préparer, comparer, décider
 
-### Ce que j’utilise
+**Produit personnel · v0.5 en développement**
 
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <sub>01 / INTERFACE</sub><br><br>
-      <strong>Des écrans faciles à prendre en main</strong><br><br>
-      <code>React</code> <code>React Native</code> <code>Next.js</code> <code>TypeScript</code>
-    </td>
-    <td width="50%" valign="top">
-      <sub>02 / API &amp; DONNÉES</sub><br><br>
-      <strong>Des informations fiables, du front à la base</strong><br><br>
-      <code>tRPC</code> <code>PostgreSQL</code> <code>Prisma</code> <code>Zod</code> <code>NestJS</code>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <sub>03 / STRUCTURE</sub><br><br>
-      <strong>Du code qu’on peut faire évoluer</strong><br><br>
-      Architecture modulaire · Contrats typés · Revue de code
-    </td>
-    <td width="50%" valign="top">
-      <sub>04 / PRODUCTION</sub><br><br>
-      <strong>Jusqu’à la mise en ligne</strong><br><br>
-      <code>Docker</code> <code>OVH</code> <code>Traefik</code> <code>Dokploy</code>
-    </td>
-  </tr>
-</table>
+<a href="https://www.jasonteste.com/projects/atelier-bozoide"><img src="https://www.jasonteste.com/projects/atelier-bozoide.jpg" alt="Interface illustrée d’Atelier Bozoïde, application de préparation pour les joueurs de DOFUS" width="100%"></a>
+
+Une application de préparation pour les joueurs de DOFUS : elle relie inventaire, recettes et objectifs pour montrer ce qu’on peut fabriquer et ce qu’il manque. Les simulations restent séparées des données du joueur. Les mêmes règles servent l’interface et les agents IA ; les résultats incertains d’une capture d’écran demandent confirmation.
+
+`Next.js` · `React` · `TypeScript` · `tRPC` · `Zod` · `Prisma` · `PostgreSQL`
+
+**[Découvrir le projet ↗](https://www.jasonteste.com/projects/atelier-bozoide)**
 
 ---
+
+### Ce que j’apporte à une équipe
+
+| Comprendre et concevoir | Construire et livrer |
+| :--- | :--- |
+| Clarifier le besoin, simplifier les parcours et faire parler le produit avant la technologie. | Relier interface, API et données ; faire évoluer le code ; aller jusqu’au domaine, à l’hébergement et aux services en production. |
+
+Chez **Marcel**, j’ai aussi fait évoluer une application déjà utilisée, avec des pull requests et des revues de code en équipe.
 
 <p align="center">
-  Je cherche une équipe produit où continuer à faire du full-stack.<br>
-  <a href="https://www.linkedin.com/in/jteste/">On en parle ? ↗</a>
+  <strong>Je cherche une équipe produit où mettre cette approche au travail.</strong><br>
+  <a href="https://www.linkedin.com/in/jteste/">On en parle sur LinkedIn ↗</a>
 </p>
