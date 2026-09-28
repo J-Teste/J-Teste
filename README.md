@@ -1,16 +1,20 @@
-## Hi there 👋
+# Jason TESTÉ
 
-<!--
-**J-Teste/J-Teste** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**Student developer at 42 Mulhouse**
 
-Here are some ideas to get you started:
+I build web applications and game systems, with contributions across backend progression features and frontend authentication flows.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Selected work
+
+### [ft_transcendence](https://github.com/J-Teste/ft_transcendence)
+
+A multiplayer web platform built with a team as part of the 42 curriculum.
+
+**My contributions**
+
+- XP and level progression, leaderboards, game events, and daily rewards
+- Authentication logic and API calls in the frontend
+
+---
+
+42 projects, experiments, and collaborative work.
