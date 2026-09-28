@@ -10,7 +10,7 @@
 
 <p align="center">
   Développeur full-stack à Mulhouse<br>
-  <sub>React · TypeScript · NestJS · PostgreSQL · Docker</sub>
+  <sub>React · TypeScript · Next.js · tRPC · PostgreSQL</sub>
 </p>
 
 ---
@@ -43,7 +43,7 @@ J’ai clarifié le besoin, conçu la nouvelle expérience, puis livré le site 
     <td width="50%" valign="top">
       <sub>02 / API &amp; DONNÉES</sub><br><br>
       <strong>Des informations fiables, du front à la base</strong><br><br>
-      <code>NestJS</code> <code>tRPC</code> <code>PostgreSQL</code> <code>Prisma</code> <code>Zod</code>
+      <code>tRPC</code> <code>PostgreSQL</code> <code>Prisma</code> <code>Zod</code> <code>NestJS</code>
     </td>
   </tr>
   <tr>
