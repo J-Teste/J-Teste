@@ -11,7 +11,7 @@
   <rect width="1200" height="320" rx="18" fill="#111113" />
   <rect width="1200" height="320" rx="18" fill="url(#glow)" />
 
-  <!-- Fine constellation lines from the portfolio background -->
+  <!-- Fine constellation lines from the portfolio's background -->
   <g fill="none" stroke="#bcbcc2" stroke-opacity=".075" stroke-width="1">
     <path d="M530 290 666 244 735 294 848 208 961 260 1094 183 1164 231" />
     <path d="M604 320 666 244 742 180 848 208 914 135 1013 160 1094 183 1155 112" />
@@ -37,16 +37,16 @@
     <circle cx="1164" cy="231" r="1.7" />
   </g>
 
-  <g font-family="system-ui, -apple-system, sans-serif">
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
     <text x="64" y="142" fill="#f4f3ef" font-size="82" font-weight="500" letter-spacing="-3">Jason TESTÉ</text>
     <text x="68" y="201" fill="#c7c7c8" font-size="34" font-weight="400" letter-spacing="-.8">Développeur full-stack</text>
   </g>
 
   <circle cx="73" cy="253" r="3.5" fill="#d9cda4" />
-  <text x="88" y="258" fill="#a8a8aa" font-family="monospace" font-size="14" letter-spacing="2">MULHOUSE · FRANCE</text>
+  <text x="88" y="258" fill="#a8a8aa" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="2">MULHOUSE · FRANCE</text>
 
-  <!-- A small flying bird as a nod to the portfolio mark -->
-  <path d="M1047 250c14-8 25-20 35-35 8-13 18-23 33-31-5 10-8 17-9 24 10-2 19-6 28-12-5 14-14 25-26 32-11 7-23 11-36 13-8 7-18 10-30 10l-16 9 9-13c-7 2-15 2-23 0 12-2 23-8 35-18-3 8-3 14 0 21z" fill="#f1f0ed" />
+  <!-- Exact crow mark used by the portfolio; inverted to its white-on-black treatment -->
+  <image x="1035" y="194" width="96" height="87" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABXCAMAAADMObAfAAAAKlBMVEVMaXEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABqfk8+AAAADXRSTlMA/APrVBKQdCKt28g3qjbLuQAAAAlwSFlzAAEZQAABGUABgON11AAAAzNJREFUaIG1WQlywzAIBHQiif9/t4NsJ21qxdZhps102nQRywowAZgxAqBYrLVFf6IprDMjcCGjqCVfqr+lRmCNgiOqE+S4OAiCoOA1gOoEg/JEK/Fxh999CMftTyu8ENg/8NWFGLbRbejTPlySTwf1F2gyBxtnXZAS9Il/5FtETA6TOXcnAbycVDfGu/Eg6DyAv14klQkP+buDzYOJwwHYL/jvRCQ/7IDbGaivJrG3jsryFCMKZm/LfhmWM4Ri/MG7ipQWM4SS44JSQVBa589uTUXlFkMTwn8ZNS8Zil+BD+SbEl0QAEFs3WGUvKhLYuP8wrMBEJDHZo2Yj4AqPd9q3FwOCEqzB6xQEUFp0r+CI7rEF5TkHumRixzwFf4URfS1hc1fBIJYp9ArB2FcRXwdwEQtojsETeSYIKbr46uDhwmS/NAU98sBrezAi0oRgbuaEqdUSu0O9t8GVErXJW5KRHQffzAF7j4/KLbbwV2BjjJ0r8RNaIigOWKdWP/TzL0SN3MJrpvkVCXtIgj7JXS7BB3Nsvv8sYcgEzsD6MKXfoJ68X03fkeJEBTuF2gXfu5fenAPfupPcHgY3/ZcANPfxvoqROm/wd7gc/yA7opvpwAHh9G7GsXRQSjcJcgPTnLhqQr6agOX2Kiv3RV0x79OMerX4OPMnTaGkpIGMTaJts+Pm4kIO2djHrnDzTkC3xuK7eS1odYk6880V4VwQ09sg+ckKk7d+nmRAF3by4qPp+Amh+KOWc843au5IGI4ZWaf2Y1O0ogK7m0F0HPrQlMCWJ/Mm7d7N+IUX8wOfmxZNUuSivdJkve2WFtCsHZ/0wB+qagH0QRENU31G3sevM/xtRj/QrCcs1HOcmKfDDOHjTca2vXVNTH9elOs4ueDM02169fPkTlE8R8CJwJXtbT9S8eGuopvW/trmdlIRg0fTt48tC7YxpQKz0EF2Oq1NIK+Fbh68BTi9vneB/1Tpvi1zWPW/FW2eOIDqv/mxQcxrJ/X7h89fKZ3zrxYZ+qNUlnYucXYiUUfISvlVR46dPU/T381Lby8U6L9xizGBwAXXpQ7s1I+cNi7loUjlmccAMT1+D87v4b9/4PwZgAAAABJRU5ErkJggg==" style="filter:invert(1)" preserveAspectRatio="xMidYMid meet" />
 
   <path d="M44 292H1156" fill="none" stroke="#e6e4df" stroke-opacity=".52" stroke-width="1" />
   <circle cx="78" cy="292" r="3" fill="#d9cda4" />
