@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./profile-banner.svg?v=2" alt="Jason TESTÉ — développeur full-stack à Mulhouse" width="100%">
+  <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/63b67b3fdf0d2e9ec4b44c7be8de354332c2ab4e/profile-banner.svg" alt="Jason TESTÉ — développeur full-stack à Mulhouse" width="100%">
 </p>
 
 <p align="center">
