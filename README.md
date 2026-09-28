@@ -10,11 +10,11 @@
   <a href="https://www.linkedin.com/in/jteste/">PARLONS PRODUIT ↗</a>
 </p>
 
-<h2 align="center">Le terrain en tête. Les mains dans le code.</h2>
+<h2 align="center">Des applications pensées pour ceux qui s’en servent.</h2>
 
 <p align="center">
-  Je conçois et développe des applications web, <strong>du besoin à la mise en production.</strong><br>
-  J’aime autant démêler un parcours compliqué que construire la solution qui le rend évident.
+  Je conçois et développe des applications web pour <strong>simplifier le quotidien de leurs utilisateurs.</strong><br>
+  Des parcours agréables à utiliser, une logique métier solide et une solution accompagnée jusqu’à la mise en production.
 </p>
 
 <p align="center">
@@ -22,7 +22,7 @@
   <sub>PostgreSQL · Prisma · Zod · Docker</sub>
 </p>
 
-Avant le code, j’ai travaillé au contact des clients, géré des achats et coordonné des équipes. J’en ai gardé un réflexe : **comprendre ce qui bloque, faire des choix clairs et suivre la solution jusqu’au bout.**
+Mon travail relie **l’expérience utilisateur et le développement full-stack** : comprendre ce qui bloque, concevoir le parcours, puis construire les interfaces, les API et les données qui le font fonctionner. Mon expérience en relation client, en achats et en coordination d’équipes m’aide à poser les bonnes questions et à tenir compte des contraintes du quotidien.
 
 ## Deux projets, des choix concrets
 
