@@ -51,29 +51,36 @@ Avant le code, j’ai travaillé au contact des clients, géré des achats et co
 </tr>
 </table>
 
-## Construire aussi avec une équipe
+<p>
+  <a href="https://www.jasonteste.com/#parcours">
+    <picture>
+      <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/862b259df20d75153a569196334f287d21bc7277/profile-experience-mobile.svg">
+      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/862b259df20d75153a569196334f287d21bc7277/profile-experience.svg" alt="Marcel · Développement full-stack · Stage, avril–septembre 2026. J’ai développé des fonctionnalités et des formulaires dans une application en production, avec des pull requests et des revues de code en équipe. Découvrir mon parcours." width="100%">
+    </picture>
+  </a>
+</p>
 
-**Marcel · Développement full-stack**  
-<sub>Stage · avril–septembre 2026 · application en production</sub>
+<p>
+  <a href="https://github.com/J-Teste#js-contribution-activity-description">
+    <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/282d7baa69566db69b3fb868f13db08560978a95/profile-metrics.svg" alt="Activité GitHub du 28 septembre 2025 au 28 septembre 2026 : 1 105 contributions réparties sur 100 jours actifs, contributions publiques et privées incluses. Relevé au 28 septembre 2026." width="100%">
+  </a>
+</p>
 
-Chez Marcel, j’ai développé des fonctionnalités et des formulaires dans une application déjà utilisée, avec des pull requests et des revues de code en équipe. **Composer avec l’existant, rendre mes choix compréhensibles et faire évoluer le produit sans casser ses usages** : c’est aussi ça, mon quotidien de développeur.
+<p><sub>Une partie du code est privée. Mes <a href="https://www.jasonteste.com/#projets">études de cas</a> montrent les problèmes abordés, les choix et les résultats.</sub></p>
 
-## Mon activité GitHub
-
-<a href="https://github.com/J-Teste#js-contribution-activity-description"><img src="https://raw.githubusercontent.com/J-Teste/J-Teste/282d7baa69566db69b3fb868f13db08560978a95/profile-metrics.svg" alt="Activité GitHub du 28 septembre 2025 au 28 septembre 2026 : 1 105 contributions réparties sur 100 jours actifs, contributions publiques et privées incluses. Relevé au 28 septembre 2026." width="100%"></a>
-
-<sub>Une partie de mon travail vit dans des dépôts privés. Les études de cas donnent à voir les problèmes abordés, mes décisions et le résultat.</sub>
-
-<br>
-
-<h2 align="center">La suite se construit en équipe.</h2>
-
-<p align="center">
-  Je cherche un <strong>poste full-stack dans une équipe produit</strong>,<br>
-  pour comprendre les usages, contribuer aux choix et livrer des fonctionnalités qui comptent.
+<p>
+  <a href="https://www.linkedin.com/in/jteste/">
+    <picture>
+      <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/862b259df20d75153a569196334f287d21bc7277/profile-contact-mobile.svg">
+      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/862b259df20d75153a569196334f287d21bc7277/profile-contact.svg" alt="On construit la suite ensemble ? Je cherche un poste full-stack dans une équipe produit, pour contribuer aux choix, développer les fonctionnalités et les accompagner en production. Échangeons sur LinkedIn. Jason TESTÉ · Mulhouse." width="100%">
+    </picture>
+  </a>
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/jteste/"><strong>PARLONS DE CE QU’ON POURRAIT CONSTRUIRE ↗</strong></a><br><br>
-  <a href="https://www.jasonteste.com/assets/cv.pdf">Mon CV</a> &nbsp;·&nbsp; <a href="https://www.jasonteste.com/">Mon portfolio</a> &nbsp;·&nbsp; Mulhouse, France
+  <a href="https://www.jasonteste.com/assets/cv.pdf">Mon CV ↗</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="mailto:jason.teste@hotmail.com">M’écrire ↗</a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://www.jasonteste.com/">Mon portfolio ↗</a>
 </p>
