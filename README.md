@@ -30,8 +30,8 @@ Mon travail relie **l’expérience utilisateur et le développement full-stack*
 <tr>
 <td width="50%" valign="top">
 <a href="https://www.jasonteste.com/projects/azzaprod"><img src="https://www.jasonteste.com/projects/azzaprod.jpg" alt="AzzaProd — une vitrine qui met les films et les images du studio au premier plan" width="100%"></a>
-<p><sub>01 / PROJET CLIENT · EN LIGNE ET MAINTENU</sub></p>
-<h3>AzzaProd</h3>
+<p><sub>PROJET CLIENT · EN LIGNE ET MAINTENU</sub></p>
+<h3>01 / AzzaProd</h3>
 <p><strong>Donner au studio une vitrine à la hauteur de ses images.</strong></p>
 <p>Le site existait ; le travail du studio passait au second plan. J’ai repris le parcours et livré une nouvelle vitrine bilingue, de l’audit UX au déploiement.</p>
 <p>Des réalisations visibles dès l’accueil, des contenus faciles à faire évoluer et un formulaire qui conserve la saisie si l’envoi échoue.</p>
@@ -40,8 +40,8 @@ Mon travail relie **l’expérience utilisateur et le développement full-stack*
 </td>
 <td width="50%" valign="top">
 <a href="https://www.jasonteste.com/projects/atelier-bozoide"><img src="https://www.jasonteste.com/projects/atelier-bozoide.jpg" alt="Atelier Bozoïde — application de préparation et de simulation pour les joueurs de DOFUS" width="100%"></a>
-<p><sub>02 / PRODUIT PERSONNEL · EN DÉVELOPPEMENT</sub></p>
-<h3>Atelier Bozoïde</h3>
+<p><sub>PRODUIT PERSONNEL · EN DÉVELOPPEMENT</sub></p>
+<h3>02 / Atelier Bozoïde</h3>
 <p><strong>Passer de « qu’est-ce qu’il me manque ? » à un plan clair.</strong></p>
 <p>Je construis un outil qui relie inventaire, recettes et objectifs pour aider les joueurs de DOFUS à préparer leurs fabrications et comparer leurs options.</p>
 <p>Du produit à l’architecture : des calculs cohérents et des simulations qui permettent d’explorer sans modifier l’inventaire réel.</p>
