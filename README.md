@@ -22,7 +22,7 @@
   <sub>PostgreSQL · Prisma · Zod · Docker</sub>
 </p>
 
-Mon travail relie **l’expérience utilisateur et le développement full-stack** : comprendre ce qui bloque, concevoir le parcours, puis développer les interfaces, les API et le modèle de données qui le font fonctionner. Mon expérience en relation client, en achats et en coordination d’équipes m’aide à poser les bonnes questions et à tenir compte des contraintes du quotidien.
+Mon travail relie **l’expérience utilisateur et le développement full-stack** : comprendre ce qui bloque, concevoir le parcours, puis développer les interfaces, les API et le modèle de données qui le font fonctionner.
 
 ## Deux projets, des choix concrets
 
@@ -54,11 +54,14 @@ Mon travail relie **l’expérience utilisateur et le développement full-stack*
 <p>
   <a href="https://www.jasonteste.com/#parcours">
     <picture>
-      <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/862b259df20d75153a569196334f287d21bc7277/profile-experience-mobile.svg">
-      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/862b259df20d75153a569196334f287d21bc7277/profile-experience.svg" alt="Marcel · Développement full-stack · Stage, avril–septembre 2026. J’ai développé des fonctionnalités et des formulaires dans une application en production, avec des pull requests et des revues de code en équipe. Découvrir mon parcours." width="100%">
+      <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/af70507f6e0a74d96817aa2de598d227db85f98d/profile-background-mobile.svg">
+      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/af70507f6e0a74d96817aa2de598d227db85f98d/profile-background.svg" alt="03 / Parcours. Avant le développement, j’ai travaillé en relation client, dans les achats et la coordination d’équipes. Écouter et clarifier la demande, faire des choix en tenant compte des contraintes, partager l’information et avancer ensemble. Découvrir mon parcours." width="100%">
     </picture>
   </a>
 </p>
+
+<p><strong>Une expérience du développement en équipe</strong><br>
+Lors de mon stage full-stack chez Marcel, j’ai développé des fonctionnalités et des formulaires dans une application en production, avec des pull requests et des revues de code.</p>
 
 <p>
   <a href="https://github.com/J-Teste#js-contribution-activity-description">
