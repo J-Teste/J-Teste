@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="480" viewBox="0 0 1100 480" role="img" aria-labelledby="title desc">
 <title id="title">Une année de contributions GitHub</title>
-<desc id="desc">Du 28 septembre 2025 au 28 septembre 2026 : 1 105 contributions GitHub et 100 jours actifs. Contributions publiques et privées incluses. Chaque carré représente un jour. Relevé au 28 septembre 2026.</desc>
+<desc id="desc">Du 28 septembre 2025 au 29 septembre 2026 : 1 141 contributions GitHub et 101 jours actifs. Contributions publiques et privées incluses. Chaque carré représente un jour. Relevé au 29 septembre 2026 à 03:49, heure de Paris.</desc>
 <rect x=".5" y=".5" width="1099" height="479" rx="18" fill="#111113" stroke="#343437"/>
 <g font-family="Arial, Helvetica, sans-serif">
 <text x="42" y="43" fill="#d9cda4" font-size="14" font-weight="400" letter-spacing="1.7">04 / ACTIVITÉ GITHUB</text>
-<text x="1056" y="43" fill="#aaa9ad" font-size="14" font-weight="400" text-anchor="end" letter-spacing=".5">RELEVÉ AU 28.09.2026</text>
-<text x="40" y="151" fill="#f4f3ef" font-size="94" font-weight="600" letter-spacing="-3.5">1 105</text>
+<text x="1056" y="43" fill="#aaa9ad" font-size="14" font-weight="400" text-anchor="end" letter-spacing=".5">RELEVÉ AU 29.09.2026 · 03:49</text>
+<text x="40" y="151" fill="#f4f3ef" font-size="94" font-weight="600" letter-spacing="-3.5">1 141</text>
 <text x="45" y="188" fill="#c7c7c8" font-size="24" font-weight="400" >contributions GitHub</text>
 <path d="M730 73v115" stroke="#363638"/>
-<text x="776" y="148" fill="#f4f3ef" font-size="74" font-weight="600" letter-spacing="-2">100</text>
+<text x="776" y="148" fill="#f4f3ef" font-size="74" font-weight="600" letter-spacing="-2">101</text>
 <text x="779" y="186" fill="#c7c7c8" font-size="23" font-weight="400" >jours actifs</text>
 <rect x="88" y="237" width="15" height="17" rx="2.5" fill="#252528"><title>2025-09-28 : 0 contributions</title></rect>
 <rect x="88" y="257" width="15" height="17" rx="2.5" fill="#252528"><title>2025-09-29 : 0 contributions</title></rect>
@@ -387,12 +387,13 @@
 <rect x="1006" y="337" width="15" height="17" rx="2.5" fill="#e0d4ad"><title>2026-09-25 : 29 contributions</title></rect>
 <rect x="1006" y="357" width="15" height="17" rx="2.5" fill="#e0d4ad"><title>2026-09-26 : 35 contributions</title></rect>
 <rect x="1024" y="237" width="15" height="17" rx="2.5" fill="#b9ae89"><title>2026-09-27 : 10 contributions</title></rect>
-<rect x="1024" y="257" width="15" height="17" rx="2.5" fill="#b9ae89"><title>2026-09-28 : 10 contributions</title></rect>
+<rect x="1024" y="257" width="15" height="17" rx="2.5" fill="#e0d4ad"><title>2026-09-28 : 32 contributions</title></rect>
+<rect x="1024" y="277" width="15" height="17" rx="2.5" fill="#b9ae89"><title>2026-09-29 : 14 contributions</title></rect>
 <text x="37" y="271" fill="#a9a8af" font-size="15" font-weight="400" >Lun.</text>
 <text x="37" y="311" fill="#a9a8af" font-size="15" font-weight="400" >Mer.</text>
 <text x="37" y="351" fill="#a9a8af" font-size="15" font-weight="400" >Ven.</text>
 <path d="M42 401h1016" stroke="#363638"/>
-<text x="43" y="427" fill="#c4c3c8" font-size="16" font-weight="400" >28 sept. 2025 — 28 sept. 2026</text>
+<text x="43" y="427" fill="#c4c3c8" font-size="16" font-weight="400" >28 sept. 2025 — 29 sept. 2026</text>
 <text x="43" y="450" fill="#aaa9ad" font-size="15" font-weight="400" >Contributions publiques et privées · Source : GitHub</text>
 <text x="843" y="437" fill="#aaa9ad" font-size="15" font-weight="400" >Moins</text>
 <rect x="897" y="422" width="16" height="17" rx="2.5" fill="#252528"/>
