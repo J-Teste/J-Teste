@@ -66,8 +66,8 @@ Lors de mon stage full-stack chez Marcel, j’ai développé des fonctionnalité
 <p>
   <a href="https://github.com/J-Teste#js-contribution-activity-description">
     <picture>
-      <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/4c30ae9e51b535233e8a5ac262c51ef7005a9239/profile-metrics-mobile.svg">
-      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/4c30ae9e51b535233e8a5ac262c51ef7005a9239/profile-metrics.svg" alt="Activité GitHub du 28 septembre 2025 au 28 septembre 2026 : 1 105 contributions réparties sur 100 jours actifs, contributions publiques et privées incluses. Relevé au 28 septembre 2026." width="100%">
+      <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/5b6693c07f20f1224bb1a168838e8f31fbeb50fc/profile-metrics-mobile.svg">
+      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/5b6693c07f20f1224bb1a168838e8f31fbeb50fc/profile-metrics.svg" alt="Du 28 septembre 2025 au 29 septembre 2026 : 1 141 contributions GitHub et 101 jours actifs. Contributions publiques et privées incluses. Chaque carré représente un jour. Relevé au 29 septembre 2026 à 03:49, heure de Paris." width="100%">
     </picture>
   </a>
 </p>
