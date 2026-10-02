@@ -4,11 +4,12 @@
 from __future__ import annotations
 
 import re
-from datetime import date
+from datetime import date, datetime
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.request import Request, urlopen
 from xml.sax.saxutils import escape
+from zoneinfo import ZoneInfo
 
 
 PROFILE = "J-Teste"
@@ -68,7 +69,16 @@ class CalendarParser(HTMLParser):
             raise ValueError("Contribution calendar is incomplete")
         if sum(self.day_counts.values()) != total:
             raise ValueError("Daily counts do not match the displayed total")
-        return total, sum(count > 0 for count in self.day_counts.values()), min(self.day_dates.values()), max(self.day_dates.values())
+        today = datetime.now(ZoneInfo("Europe/Paris")).date()
+        start = today.replace(day=1)
+        end = max(self.day_dates.values())
+        if end < start:
+            raise ValueError("The current month is not yet in GitHub's calendar")
+        month_counts = [
+            count for day_id, count in self.day_counts.items()
+            if start <= self.day_dates[day_id] <= today
+        ]
+        return sum(month_counts), sum(count > 0 for count in month_counts), start, min(end, today)
 
 
 def fetch_metrics() -> tuple[int, int, date, date]:
@@ -89,36 +99,36 @@ def fetch_metrics() -> tuple[int, int, date, date]:
 def card(total: int, active: int, start: date, end: date, mobile: bool) -> str:
     total_label = f"{total:,}".replace(",", " ")
     end_label = end.strftime("%d.%m.%Y")
+    month_label = MONTHS[start.month - 1]
     description = escape(
-        f"Du {start.day} {MONTHS[start.month - 1]} {start.year} au "
-        f"{end.day} {MONTHS[end.month - 1]} {end.year} : "
+        f"Du 1er {month_label} au {end.day} {MONTHS[end.month - 1]} {end.year} : "
         f"{total_label} contributions GitHub et {active} jours actifs. "
         "Chiffres visibles sur le profil GitHub, actualisés automatiquement."
     )
     if mobile:
-        width, height = 600, 350
+        width, height = 600, 390
         body = f"""<text x="32" y="47" fill="#d9cda4" font-size="21" letter-spacing="1">04 / ACTIVITÉ GITHUB</text>
-<text x="568" y="47" fill="#aaa9ad" font-size="16" text-anchor="end">{end_label}</text>
+<text x="568" y="47" fill="#aaa9ad" font-size="16" text-anchor="end">{month_label.upper()} {start.year}</text>
 <path d="M32 67h536" stroke="#363638"/>
 <text x="30" y="163" fill="#f4f3ef" font-size="87" font-weight="600" letter-spacing="-3">{total_label}</text>
-<text x="34" y="201" fill="#c7c7c8" font-size="25">contributions GitHub</text>
+<text x="34" y="201" fill="#c7c7c8" font-size="25">contributions en {month_label}</text>
 <path d="M32 223h536" stroke="#363638"/>
 <text x="32" y="303" fill="#f4f3ef" font-size="67" font-weight="600" letter-spacing="-2">{active}</text>
-<text x="223" y="299" fill="#c7c7c8" font-size="25">jours actifs</text>
-<text x="34" y="332" fill="#aaa9ad" font-size="16">Sur les 12 derniers mois · chiffres visibles sur ce profil</text>"""
+<text x="34" y="341" fill="#c7c7c8" font-size="25">jours actifs</text>
+<text x="34" y="374" fill="#aaa9ad" font-size="16">Mois en cours · relevé au {end_label}</text>"""
     else:
         width, height = 1100, 260
         body = f"""<text x="42" y="47" fill="#d9cda4" font-size="14" letter-spacing="1.7">04 / ACTIVITÉ GITHUB</text>
-<text x="1058" y="47" fill="#aaa9ad" font-size="14" text-anchor="end">12 DERNIERS MOIS · {end_label}</text>
+<text x="1058" y="47" fill="#aaa9ad" font-size="14" text-anchor="end">{month_label.upper()} {start.year} · RELEVÉ AU {end_label}</text>
 <text x="40" y="156" fill="#f4f3ef" font-size="94" font-weight="600" letter-spacing="-3.5">{total_label}</text>
-<text x="45" y="195" fill="#c7c7c8" font-size="24">contributions GitHub</text>
+<text x="45" y="195" fill="#c7c7c8" font-size="24">contributions en {month_label}</text>
 <path d="M652 73v137" stroke="#363638"/>
 <text x="711" y="155" fill="#f4f3ef" font-size="80" font-weight="600" letter-spacing="-2">{active}</text>
 <text x="716" y="194" fill="#c7c7c8" font-size="23">jours actifs</text>
 <path d="M42 219h1016" stroke="#363638"/>
-<text x="43" y="245" fill="#aaa9ad" font-size="16">Contributions visibles sur ce profil · données GitHub actualisées automatiquement</text>"""
+<text x="43" y="245" fill="#aaa9ad" font-size="16">Mois en cours · données GitHub actualisées automatiquement</text>"""
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
-<title id="title">Activité GitHub sur les 12 derniers mois</title>
+<title id="title">Activité GitHub du mois en cours</title>
 <desc id="desc">{description}</desc>
 <rect x=".5" y=".5" width="{width - 1}" height="{height - 1}" rx="18" fill="#111113" stroke="#343437"/>
 <g font-family="Arial, Helvetica, sans-serif">

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100" height="354" viewBox="0 0 1100 354" role="img" aria-labelledby="title desc">
 <title id="title">On construit la suite ensemble ?</title>
-<desc id="desc">Je cherche un poste full-stack dans une équipe produit, pour contribuer aux choix, développer les fonctionnalités et les accompagner en production. Échangeons sur LinkedIn. Jason TESTÉ, Mulhouse.</desc>
+<desc id="desc">Une question sur mes projets, mon parcours ou un choix technique ? Échangeons par e-mail ou sur LinkedIn. Jason TESTÉ, Mulhouse.</desc>
 <rect x=".5" y=".5" width="1099" height="353" rx="18" fill="#e9e3d7" stroke="#d0c7b5"/>
 <g fill="none" stroke="#c6bdab" stroke-width="1">
 <path d="M870 34 920 86 999 65 1063 113m-143-27 16 77 127-50m-64-48 58-30"/>
@@ -12,8 +12,8 @@
 <text x="43" y="43" fill="#625c4e" font-size="13" letter-spacing="2">LA SUITE / EN ÉQUIPE</text>
 <text x="40" y="108" fill="#18181b" font-size="52" font-weight="600" letter-spacing="-1.7">On construit la suite</text>
 <text x="40" y="165" fill="#18181b" font-size="52" font-weight="600" letter-spacing="-1.7">ensemble ?</text>
-<text x="43" y="210" fill="#4b4842" font-size="20">Je cherche un poste full-stack dans une équipe produit, pour contribuer aux choix,</text>
-<text x="43" y="238" fill="#4b4842" font-size="20">développer les fonctionnalités et les accompagner en production.</text>
+<text x="43" y="210" fill="#4b4842" font-size="20">Une question sur mes projets, mon parcours ou un choix technique ?</text>
+<text x="43" y="238" fill="#4b4842" font-size="20">Échangeons par e-mail ou sur LinkedIn.</text>
 <rect x="42" y="272" width="319" height="52" rx="8" fill="#171719"/>
 <text x="66" y="305" fill="#f4f3ef" font-size="18" font-weight="600">Échangeons sur LinkedIn</text>
 <path d="m324 304 10-10m-9 0h9v9" fill="none" stroke="#d9cda4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://www.jasonteste.com/"><strong>EXPLORER MON PORTFOLIO ↗</strong></a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://www.jasonteste.com/assets/cv.pdf">CV ↗</a>
+  <a href="https://www.jasonteste.com/assets/CV_Jason_TESTE.pdf">CV ↗</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://www.linkedin.com/in/jteste/">PARLONS PRODUIT ↗</a>
 </p>
@@ -67,7 +67,7 @@ Lors de mon stage full-stack chez Marcel, j’ai développé des fonctionnalité
   <a href="https://github.com/J-Teste#js-contribution-activity-description">
     <picture>
       <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics-mobile.svg">
-      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics.svg" alt="Activité GitHub sur les douze derniers mois : contributions et jours actifs, actualisés automatiquement." width="100%">
+      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics.svg" alt="Activité GitHub du mois en cours : contributions et jours actifs, actualisés automatiquement." width="100%">
     </picture>
   </a>
 </p>
@@ -79,14 +79,14 @@ Lors de mon stage full-stack chez Marcel, j’ai développé des fonctionnalité
 <p>
   <a href="https://www.linkedin.com/in/jteste/">
     <picture>
-      <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/862b259df20d75153a569196334f287d21bc7277/profile-contact-mobile.svg">
-      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/862b259df20d75153a569196334f287d21bc7277/profile-contact.svg" alt="On construit la suite ensemble ? Je cherche un poste full-stack dans une équipe produit, pour contribuer aux choix, développer les fonctionnalités et les accompagner en production. Échangeons sur LinkedIn. Jason TESTÉ · Mulhouse." width="100%">
+      <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-contact-mobile.svg">
+      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-contact.svg" alt="On construit la suite ensemble ? Une question sur mes projets, mon parcours ou un choix technique ? Échangeons par e-mail ou sur LinkedIn. Jason TESTÉ · Mulhouse." width="100%">
     </picture>
   </a>
 </p>
 
 <p align="center">
-  <a href="https://www.jasonteste.com/assets/cv.pdf">Mon CV ↗</a>
+  <a href="https://www.jasonteste.com/assets/CV_Jason_TESTE.pdf">Mon CV ↗</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="mailto:jason.teste@hotmail.com">M’écrire ↗</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
