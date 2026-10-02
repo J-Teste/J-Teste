@@ -63,12 +63,13 @@ Mon travail relie **l’expérience utilisateur et le développement full-stack*
 <p><strong>Une expérience du développement en équipe</strong><br>
 Lors de mon stage full-stack chez Marcel, j’ai développé des fonctionnalités et des formulaires dans une application en production, avec des pull requests et des revues de code.</p>
 
-<p align="center">
-  <strong>Projets en ligne</strong><br>
-  <sub>Des réalisations à découvrir directement sur le web.</sub><br><br>
-  <a href="https://azzaprod.com/"><img src="https://img.shields.io/website?url=https%3A%2F%2Fazzaprod.com%2F&amp;label=AzzaProd&amp;up_message=en%20ligne&amp;down_message=%C3%A0%20v%C3%A9rifier&amp;up_color=2563eb&amp;down_color=6b7280&amp;style=flat-square" alt="État actuel du site AzzaProd" height="28"></a>
-  &nbsp;&nbsp;
-  <a href="https://www.jasonteste.com/"><img src="https://img.shields.io/website?url=https%3A%2F%2Fwww.jasonteste.com%2F&amp;label=Portfolio&amp;up_message=en%20ligne&amp;down_message=%C3%A0%20v%C3%A9rifier&amp;up_color=2563eb&amp;down_color=6b7280&amp;style=flat-square" alt="État actuel du portfolio" height="28"></a>
+<p>
+  <a href="https://github.com/J-Teste#js-contribution-activity-description">
+    <picture>
+      <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics-mobile.svg">
+      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics.svg" alt="Activité GitHub sur les douze derniers mois : contributions et jours actifs, actualisés automatiquement." width="100%">
+    </picture>
+  </a>
 </p>
 
 <h3 align="center">Une partie du code est privée.</h3>
