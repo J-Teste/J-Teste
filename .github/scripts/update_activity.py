@@ -117,7 +117,7 @@ def card(total: int, active: int, start: date, annual_start: date, end: date, mo
     )
     if mobile:
         width, height = 600, 390
-        body = f"""<text x="32" y="47" fill="#d9cda4" font-size="21" letter-spacing="1">04 / ACTIVITÉ GITHUB</text>
+        body = f"""<text x="32" y="47" fill="#d9cda4" font-size="21" letter-spacing="1">ACTIVITÉ GITHUB</text>
 <text x="568" y="47" fill="#aaa9ad" font-size="16" text-anchor="end">{month_label.upper()} {start.year}</text>
 <path d="M32 67h536" stroke="#363638"/>
 <text x="30" y="163" fill="#f4f3ef" font-size="87" font-weight="600" letter-spacing="-3">{total_label}</text>
@@ -128,7 +128,7 @@ def card(total: int, active: int, start: date, annual_start: date, end: date, mo
 <text x="34" y="374" fill="#aaa9ad" font-size="16">Relevé au {end_label} · mise à jour automatique</text>"""
     else:
         width, height = 1100, 260
-        body = f"""<text x="42" y="47" fill="#d9cda4" font-size="14" letter-spacing="1.7">04 / ACTIVITÉ GITHUB</text>
+        body = f"""<text x="42" y="47" fill="#d9cda4" font-size="14" letter-spacing="1.7">ACTIVITÉ GITHUB</text>
 <text x="1058" y="47" fill="#aaa9ad" font-size="14" text-anchor="end">{month_label.upper()} {start.year} · RELEVÉ AU {end_label}</text>
 <text x="40" y="156" fill="#f4f3ef" font-size="94" font-weight="600" letter-spacing="-3.5">{total_label}</text>
 <text x="45" y="195" fill="#c7c7c8" font-size="24">contributions en {month_label}</text>
