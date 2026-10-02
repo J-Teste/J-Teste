@@ -4,7 +4,7 @@
 from __future__ import annotations
 
 import re
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.request import Request, urlopen
@@ -59,7 +59,7 @@ class CalendarParser(HTMLParser):
             self.day_counts[self._tooltip_id] = 0 if raw_count == "No" else int(raw_count.replace(",", ""))
             self._tooltip_id = None
 
-    def metrics(self) -> tuple[int, int, date, date]:
+    def metrics(self) -> tuple[int, int, date, date, date]:
         label = " ".join(self.total_text)
         match = re.search(r"([\d,\s\u202f]+)\s+contributions", label)
         if not match:
@@ -78,10 +78,18 @@ class CalendarParser(HTMLParser):
             count for day_id, count in self.day_counts.items()
             if start <= self.day_dates[day_id] <= today
         ]
-        return sum(month_counts), sum(count > 0 for count in month_counts), start, min(end, today)
+        end = min(end, today)
+        annual_start = end - timedelta(days=364)
+        if min(self.day_dates.values()) > annual_start:
+            raise ValueError("The contribution calendar does not cover the last 365 days")
+        annual_active = sum(
+            count > 0 for day_id, count in self.day_counts.items()
+            if annual_start <= self.day_dates[day_id] <= end
+        )
+        return sum(month_counts), annual_active, start, annual_start, end
 
 
-def fetch_metrics() -> tuple[int, int, date, date]:
+def fetch_metrics() -> tuple[int, int, date, date, date]:
     request = Request(
         f"https://github.com/users/{PROFILE}/contributions",
         headers={
@@ -96,13 +104,15 @@ def fetch_metrics() -> tuple[int, int, date, date]:
     return parser.metrics()
 
 
-def card(total: int, active: int, start: date, end: date, mobile: bool) -> str:
+def card(total: int, active: int, start: date, annual_start: date, end: date, mobile: bool) -> str:
     total_label = f"{total:,}".replace(",", " ")
     end_label = end.strftime("%d.%m.%Y")
     month_label = MONTHS[start.month - 1]
     description = escape(
         f"Du 1er {month_label} au {end.day} {MONTHS[end.month - 1]} {end.year} : "
-        f"{total_label} contributions GitHub et {active} jours actifs. "
+        f"{total_label} contributions GitHub ce mois-ci. "
+        f"Du {annual_start.day} {MONTHS[annual_start.month - 1]} {annual_start.year} "
+        f"au {end.day} {MONTHS[end.month - 1]} {end.year} : {active} jours actifs. "
         "Chiffres visibles sur le profil GitHub, actualisés automatiquement."
     )
     if mobile:
@@ -114,8 +124,8 @@ def card(total: int, active: int, start: date, end: date, mobile: bool) -> str:
 <text x="34" y="201" fill="#c7c7c8" font-size="25">contributions en {month_label}</text>
 <path d="M32 223h536" stroke="#363638"/>
 <text x="32" y="303" fill="#f4f3ef" font-size="67" font-weight="600" letter-spacing="-2">{active}</text>
-<text x="34" y="341" fill="#c7c7c8" font-size="25">jours actifs</text>
-<text x="34" y="374" fill="#aaa9ad" font-size="16">Mois en cours · relevé au {end_label}</text>"""
+<text x="34" y="341" fill="#c7c7c8" font-size="25">jours actifs sur 12 mois</text>
+<text x="34" y="374" fill="#aaa9ad" font-size="16">Relevé au {end_label} · mise à jour automatique</text>"""
     else:
         width, height = 1100, 260
         body = f"""<text x="42" y="47" fill="#d9cda4" font-size="14" letter-spacing="1.7">04 / ACTIVITÉ GITHUB</text>
@@ -124,11 +134,11 @@ def card(total: int, active: int, start: date, end: date, mobile: bool) -> str:
 <text x="45" y="195" fill="#c7c7c8" font-size="24">contributions en {month_label}</text>
 <path d="M652 73v137" stroke="#363638"/>
 <text x="711" y="155" fill="#f4f3ef" font-size="80" font-weight="600" letter-spacing="-2">{active}</text>
-<text x="716" y="194" fill="#c7c7c8" font-size="23">jours actifs</text>
+<text x="716" y="194" fill="#c7c7c8" font-size="23">jours actifs sur 12 mois</text>
 <path d="M42 219h1016" stroke="#363638"/>
-<text x="43" y="245" fill="#aaa9ad" font-size="16">Mois en cours · données GitHub actualisées automatiquement</text>"""
+<text x="43" y="245" fill="#aaa9ad" font-size="16">Contributions du mois · jours actifs sur 12 mois · données GitHub actualisées automatiquement</text>"""
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
-<title id="title">Activité GitHub du mois en cours</title>
+<title id="title">Activité GitHub du mois en cours et des 12 derniers mois</title>
 <desc id="desc">{description}</desc>
 <rect x=".5" y=".5" width="{width - 1}" height="{height - 1}" rx="18" fill="#111113" stroke="#343437"/>
 <g font-family="Arial, Helvetica, sans-serif">
@@ -139,10 +149,10 @@ def card(total: int, active: int, start: date, end: date, mobile: bool) -> str:
 
 
 def main() -> None:
-    total, active, start, end = fetch_metrics()
-    (ROOT / "profile-metrics.svg").write_text(card(total, active, start, end, False), encoding="utf-8")
-    (ROOT / "profile-metrics-mobile.svg").write_text(card(total, active, start, end, True), encoding="utf-8")
-    print(f"{total} contributions, {active} active days, {start} to {end}")
+    total, active, start, annual_start, end = fetch_metrics()
+    (ROOT / "profile-metrics.svg").write_text(card(total, active, start, annual_start, end, False), encoding="utf-8")
+    (ROOT / "profile-metrics-mobile.svg").write_text(card(total, active, start, annual_start, end, True), encoding="utf-8")
+    print(f"{total} monthly contributions ({start} to {end}), {active} active days ({annual_start} to {end})")
 
 
 if __name__ == "__main__":

@@ -24,6 +24,8 @@
 
 Mon travail relie **l’expérience utilisateur et le développement full-stack** : comprendre ce qui bloque, concevoir le parcours, puis développer les interfaces, les API et le modèle de données qui le font fonctionner.
 
+Je suis **développeur full-stack et automatisation chez Drivecase**. J’y contribue au développement d’applications internes et à l’automatisation des processus métier.
+
 ## Deux projets, des choix concrets
 
 <table>
@@ -67,7 +69,7 @@ Lors de mon stage full-stack chez Marcel, j’ai développé des fonctionnalité
   <a href="https://github.com/J-Teste#js-contribution-activity-description">
     <picture>
       <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics-mobile.svg">
-      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics.svg" alt="Activité GitHub du mois en cours : contributions et jours actifs, actualisés automatiquement." width="100%">
+      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics.svg" alt="Activité GitHub actualisée automatiquement : contributions du mois en cours et jours actifs sur les 12 derniers mois." width="100%">
     </picture>
   </a>
 </p>
