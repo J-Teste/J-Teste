@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="390" viewBox="0 0 600 390" role="img" aria-labelledby="title desc">
-<title id="title">Meilleur mois GitHub des trois derniers, jours actifs sur 12 mois et 60 jours</title>
-<desc id="desc">Meilleur mois des trois derniers : 611 contributions GitHub en septembre 2026. Du 4 octobre 2025 au 3 octobre 2026 : 104 jours actifs. 46 jours actifs sur les 60 derniers jours. Chiffres visibles sur le profil GitHub, actualisés automatiquement.</desc>
-<rect x=".5" y=".5" width="599" height="389" rx="18" fill="#111113" stroke="#343437"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="440" viewBox="0 0 600 440" role="img" aria-labelledby="title desc">
+<title id="title">Contributions du mois le plus actif et jours actifs sur les 12 derniers mois</title>
+<desc id="desc">Mois le plus actif des trois derniers mois : 611 contributions GitHub en septembre 2026. Du 4 octobre 2025 au 3 octobre 2026 : 104 jours actifs. Chiffres visibles sur le profil GitHub, actualisés automatiquement.</desc>
+<rect x=".5" y=".5" width="599" height="439" rx="18" fill="#111113" stroke="#343437"/>
 <g font-family="Arial, Helvetica, sans-serif">
 <text x="32" y="47" fill="#d9cda4" font-size="21" letter-spacing="1">ACTIVITÉ GITHUB</text>
-<text x="568" y="47" fill="#aaa9ad" font-size="16" text-anchor="end">MEILLEUR MOIS SUR 3</text>
-<path d="M32 67h536" stroke="#363638"/>
-<text x="30" y="163" fill="#f4f3ef" font-size="87" font-weight="600" letter-spacing="-3">611</text>
-<text x="34" y="201" fill="#c7c7c8" font-size="25">contributions en septembre 2026</text>
-<path d="M32 223h536" stroke="#363638"/>
-<text x="32" y="303" fill="#f4f3ef" font-size="67" font-weight="600" letter-spacing="-2">104</text>
-<text x="34" y="341" fill="#c7c7c8" font-size="25">jours actifs sur 12 mois</text>
-<text x="34" y="376" fill="#d9cda4" font-size="24">Rythme récent · 46 jours actifs sur 60</text>
+<text x="568" y="47" fill="#aaa9ad" font-size="16" text-anchor="end">03.10.2026</text>
+<text x="30" y="149" fill="#f4f3ef" font-size="87" font-weight="600" letter-spacing="-3">611</text>
+<text x="34" y="189" fill="#c7c7c8" font-size="25">contributions en septembre 2026</text>
+<text x="34" y="221" fill="#aaa9ad" font-size="22">Mois le plus actif des 3 derniers mois</text>
+<path d="M32 245h536" stroke="#363638"/>
+<text x="30" y="334" fill="#f4f3ef" font-size="87" font-weight="600" letter-spacing="-3">104</text>
+<text x="34" y="374" fill="#c7c7c8" font-size="25">jours actifs</text>
+<text x="34" y="409" fill="#aaa9ad" font-size="22">Sur les 12 derniers mois</text>
 </g>
 </svg>

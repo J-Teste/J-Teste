@@ -60,7 +60,7 @@ class CalendarParser(HTMLParser):
             self.day_counts[self._tooltip_id] = 0 if raw_count == "No" else int(raw_count.replace(",", ""))
             self._tooltip_id = None
 
-    def metrics(self) -> tuple[int, int, int, date, date, date]:
+    def metrics(self) -> tuple[int, int, date, date, date]:
         label = " ".join(self.total_text)
         match = re.search(r"([\d,\s\u202f]+)\s+contributions", label)
         if not match:
@@ -96,15 +96,10 @@ class CalendarParser(HTMLParser):
             count > 0 for day_id, count in self.day_counts.items()
             if annual_start <= self.day_dates[day_id] <= end
         )
-        recent_start = end - timedelta(days=59)
-        recent_active = sum(
-            count > 0 for day_id, count in self.day_counts.items()
-            if recent_start <= self.day_dates[day_id] <= end
-        )
-        return month_counts[best_month], annual_active, recent_active, best_month, annual_start, end
+        return month_counts[best_month], annual_active, best_month, annual_start, end
 
 
-def fetch_metrics() -> tuple[int, int, int, date, date, date]:
+def fetch_metrics() -> tuple[int, int, date, date, date]:
     request = Request(
         f"https://github.com/users/{PROFILE}/contributions",
         headers={
@@ -119,42 +114,41 @@ def fetch_metrics() -> tuple[int, int, int, date, date, date]:
     return parser.metrics()
 
 
-def card(total: int, active: int, recent_active: int, best_month: date, annual_start: date, end: date, mobile: bool) -> str:
+def card(total: int, active: int, best_month: date, annual_start: date, end: date, mobile: bool) -> str:
     total_label = f"{total:,}".replace(",", " ")
     end_label = end.strftime("%d.%m.%Y")
     month_label = MONTHS[best_month.month - 1]
     description = escape(
-        f"Meilleur mois des trois derniers : {total_label} contributions GitHub "
+        f"Mois le plus actif des trois derniers mois : {total_label} contributions GitHub "
         f"en {month_label} {best_month.year}. "
         f"Du {annual_start.day} {MONTHS[annual_start.month - 1]} {annual_start.year} "
         f"au {end.day} {MONTHS[end.month - 1]} {end.year} : {active} jours actifs. "
-        f"{recent_active} jours actifs sur les 60 derniers jours. "
         "Chiffres visibles sur le profil GitHub, actualisés automatiquement."
     )
     if mobile:
-        width, height = 600, 390
+        width, height = 600, 440
         body = f"""<text x="32" y="47" fill="#d9cda4" font-size="21" letter-spacing="1">ACTIVITÉ GITHUB</text>
-<text x="568" y="47" fill="#aaa9ad" font-size="16" text-anchor="end">MEILLEUR MOIS SUR 3</text>
-<path d="M32 67h536" stroke="#363638"/>
-<text x="30" y="163" fill="#f4f3ef" font-size="87" font-weight="600" letter-spacing="-3">{total_label}</text>
-<text x="34" y="201" fill="#c7c7c8" font-size="25">contributions en {month_label} {best_month.year}</text>
-<path d="M32 223h536" stroke="#363638"/>
-<text x="32" y="303" fill="#f4f3ef" font-size="67" font-weight="600" letter-spacing="-2">{active}</text>
-<text x="34" y="341" fill="#c7c7c8" font-size="25">jours actifs sur 12 mois</text>
-<text x="34" y="376" fill="#d9cda4" font-size="24">Rythme récent · {recent_active} jours actifs sur 60</text>"""
+<text x="568" y="47" fill="#aaa9ad" font-size="16" text-anchor="end">{end_label}</text>
+<text x="30" y="149" fill="#f4f3ef" font-size="87" font-weight="600" letter-spacing="-3">{total_label}</text>
+<text x="34" y="189" fill="#c7c7c8" font-size="25">contributions en {month_label} {best_month.year}</text>
+<text x="34" y="221" fill="#aaa9ad" font-size="22">Mois le plus actif des 3 derniers mois</text>
+<path d="M32 245h536" stroke="#363638"/>
+<text x="30" y="334" fill="#f4f3ef" font-size="87" font-weight="600" letter-spacing="-3">{active}</text>
+<text x="34" y="374" fill="#c7c7c8" font-size="25">jours actifs</text>
+<text x="34" y="409" fill="#aaa9ad" font-size="22">Sur les 12 derniers mois</text>"""
     else:
-        width, height = 1100, 260
+        width, height = 1100, 250
         body = f"""<text x="42" y="47" fill="#d9cda4" font-size="14" letter-spacing="1.7">ACTIVITÉ GITHUB</text>
-<text x="1058" y="47" fill="#aaa9ad" font-size="14" text-anchor="end">MEILLEUR MOIS SUR 3 · RELEVÉ AU {end_label}</text>
-<text x="40" y="156" fill="#f4f3ef" font-size="94" font-weight="600" letter-spacing="-3.5">{total_label}</text>
-<text x="45" y="195" fill="#c7c7c8" font-size="24">contributions en {month_label} {best_month.year}</text>
-<path d="M652 73v137" stroke="#363638"/>
-<text x="711" y="155" fill="#f4f3ef" font-size="80" font-weight="600" letter-spacing="-2">{active}</text>
-<text x="716" y="194" fill="#c7c7c8" font-size="23">jours actifs sur 12 mois</text>
-<path d="M42 219h1016" stroke="#363638"/>
-<text x="43" y="245" fill="#d9cda4" font-size="18">Rythme récent · {recent_active} jours actifs sur les 60 derniers jours · mise à jour automatique</text>"""
+<text x="1058" y="47" fill="#aaa9ad" font-size="14" text-anchor="end">Actualisé le {end_label}</text>
+<text x="40" y="150" fill="#f4f3ef" font-size="94" font-weight="600" letter-spacing="-3.5">{total_label}</text>
+<text x="45" y="189" fill="#c7c7c8" font-size="24">contributions en {month_label} {best_month.year}</text>
+<text x="45" y="224" fill="#aaa9ad" font-size="18">Mois le plus actif des 3 derniers mois</text>
+<path d="M652 73v151" stroke="#363638"/>
+<text x="711" y="150" fill="#f4f3ef" font-size="94" font-weight="600" letter-spacing="-3.5">{active}</text>
+<text x="716" y="189" fill="#c7c7c8" font-size="24">jours actifs</text>
+<text x="716" y="224" fill="#aaa9ad" font-size="18">Sur les 12 derniers mois</text>"""
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
-<title id="title">Meilleur mois GitHub des trois derniers, jours actifs sur 12 mois et 60 jours</title>
+<title id="title">Contributions du mois le plus actif et jours actifs sur les 12 derniers mois</title>
 <desc id="desc">{description}</desc>
 <rect x=".5" y=".5" width="{width - 1}" height="{height - 1}" rx="18" fill="#111113" stroke="#343437"/>
 <g font-family="Arial, Helvetica, sans-serif">
@@ -165,9 +159,9 @@ def card(total: int, active: int, recent_active: int, best_month: date, annual_s
 
 
 def main() -> None:
-    total, active, recent_active, best_month, annual_start, end = fetch_metrics()
-    desktop_svg = card(total, active, recent_active, best_month, annual_start, end, False)
-    mobile_svg = card(total, active, recent_active, best_month, annual_start, end, True)
+    total, active, best_month, annual_start, end = fetch_metrics()
+    desktop_svg = card(total, active, best_month, annual_start, end, False)
+    mobile_svg = card(total, active, best_month, annual_start, end, True)
     version = hashlib.sha256((desktop_svg + mobile_svg).encode("utf-8")).hexdigest()[:12]
 
     readme_path = ROOT / "README.md"
@@ -183,7 +177,7 @@ def main() -> None:
     (ROOT / "profile-metrics.svg").write_text(desktop_svg, encoding="utf-8")
     (ROOT / "profile-metrics-mobile.svg").write_text(mobile_svg, encoding="utf-8")
     readme_path.write_text(readme, encoding="utf-8")
-    print(f"{total} contributions in best recent month ({best_month}), {active} active days ({annual_start} to {end}), {recent_active} active days in the last 60 days")
+    print(f"{total} contributions in best recent month ({best_month}), {active} active days ({annual_start} to {end})")
 
 
 if __name__ == "__main__":
