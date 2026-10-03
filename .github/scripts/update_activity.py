@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import re
 from datetime import date, datetime, timedelta
 from html.parser import HTMLParser
@@ -150,8 +151,23 @@ def card(total: int, active: int, start: date, annual_start: date, end: date, mo
 
 def main() -> None:
     total, active, start, annual_start, end = fetch_metrics()
-    (ROOT / "profile-metrics.svg").write_text(card(total, active, start, annual_start, end, False), encoding="utf-8")
-    (ROOT / "profile-metrics-mobile.svg").write_text(card(total, active, start, annual_start, end, True), encoding="utf-8")
+    desktop_svg = card(total, active, start, annual_start, end, False)
+    mobile_svg = card(total, active, start, annual_start, end, True)
+    version = hashlib.sha256((desktop_svg + mobile_svg).encode("utf-8")).hexdigest()[:12]
+
+    readme_path = ROOT / "README.md"
+    readme = readme_path.read_text(encoding="utf-8")
+    for filename in ("profile-metrics.svg", "profile-metrics-mobile.svg"):
+        pattern = re.compile(
+            rf"(https://raw\.githubusercontent\.com/{PROFILE}/{PROFILE}/main/{filename}\?v=)[^\"\s>]+"
+        )
+        readme, replacements = pattern.subn(lambda match: match.group(1) + version, readme)
+        if replacements != 1:
+            raise ValueError(f"Expected one versioned URL for {filename}, found {replacements}")
+
+    (ROOT / "profile-metrics.svg").write_text(desktop_svg, encoding="utf-8")
+    (ROOT / "profile-metrics-mobile.svg").write_text(mobile_svg, encoding="utf-8")
+    readme_path.write_text(readme, encoding="utf-8")
     print(f"{total} monthly contributions ({start} to {end}), {active} active days ({annual_start} to {end})")
 
 
