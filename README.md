@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.jasonteste.com/"><strong>Portfolio et études de cas ↗</strong></a>
+  <a href="https://www.jasonteste.com/"><strong>Portfolio ↗</strong></a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
   <a href="https://www.jasonteste.com/assets/CV_Jason_TESTE.pdf">CV ↗</a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
