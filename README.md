@@ -14,6 +14,25 @@
   <a href="https://www.linkedin.com/in/jteste/">LinkedIn ↗</a>
 </p>
 
+## Projets
+
+<table>
+<tr>
+<td width="50%" valign="top">
+  <a href="https://www.jasonteste.com/projects/azzaprod"><img src="https://www.jasonteste.com/projects/azzaprod.jpg" alt="AzzaProd — vitrine du studio VFX" width="100%"></a>
+  <h3>AzzaProd</h3>
+  <p>Une vitrine bilingue qui met les réalisations du studio au premier plan.</p>
+  <p><a href="https://www.jasonteste.com/projects/azzaprod">Voir le projet ↗</a></p>
+</td>
+<td width="50%" valign="top">
+  <a href="https://www.jasonteste.com/projects/atelier-bozoide"><img src="https://www.jasonteste.com/projects/atelier-bozoide.jpg" alt="Atelier Bozoïde — outil de préparation pour DOFUS" width="100%"></a>
+  <h3>Atelier Bozoïde</h3>
+  <p>Un outil pour planifier ses fabrications et comparer ses options dans DOFUS.</p>
+  <p><a href="https://www.jasonteste.com/projects/atelier-bozoide">Voir le projet ↗</a></p>
+</td>
+</tr>
+</table>
+
 <p>
   <a href="https://github.com/J-Teste#js-contribution-activity-description">
     <picture>
