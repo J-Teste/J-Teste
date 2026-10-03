@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
   <title id="title">Jason TESTÉ — développeur full-stack</title>
-  <desc id="desc">Développeur full-stack et automatisation chez Drivecase, à Mulhouse.</desc>
+  <desc id="desc">Développeur full-stack chez Drivecase à Mulhouse : applications web et automatisation.</desc>
   <defs>
     <radialGradient id="glow" cx="84%" cy="56%" r="60%">
       <stop offset="0" stop-color="#2c2c2d" stop-opacity=".65" />
@@ -22,8 +22,8 @@
   </g>
   <g font-family="Arial, Helvetica, sans-serif">
     <text x="62" y="128" fill="#f4f3ef" font-size="78" font-weight="500" letter-spacing="-3">Jason TESTÉ</text>
-    <text x="66" y="185" fill="#c7c7c8" font-size="32" letter-spacing="-.8">Développeur full-stack</text>
-    <text x="67" y="231" fill="#d9cda4" font-size="23">Automatisation chez Drivecase</text>
+    <text x="66" y="185" fill="#c7c7c8" font-size="32" letter-spacing="-.8">Développeur full-stack chez Drivecase</text>
+    <text x="67" y="231" fill="#d9cda4" font-size="23">Applications web · automatisation</text>
     <circle cx="70" cy="289" r="3.5" fill="#d9cda4" />
     <text x="84" y="295" fill="#aaa9ad" font-size="16" letter-spacing="1.5">MULHOUSE · FRANCE</text>
   </g>
