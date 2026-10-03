@@ -71,15 +71,24 @@ class CalendarParser(HTMLParser):
         if sum(self.day_counts.values()) != total:
             raise ValueError("Daily counts do not match the displayed total")
         today = datetime.now(ZoneInfo("Europe/Paris")).date()
-        start = today.replace(day=1)
+        current_month = today.replace(day=1)
         end = max(self.day_dates.values())
-        if end < start:
+        if end < current_month:
             raise ValueError("The current month is not yet in GitHub's calendar")
-        month_counts = [
-            count for day_id, count in self.day_counts.items()
-            if start <= self.day_dates[day_id] <= today
-        ]
         end = min(end, today)
+        recent_months = [current_month]
+        for _ in range(2):
+            recent_months.append((recent_months[-1] - timedelta(days=1)).replace(day=1))
+        month_counts = {
+            month: sum(
+                count for day_id, count in self.day_counts.items()
+                if month.year == self.day_dates[day_id].year
+                and month.month == self.day_dates[day_id].month
+                and self.day_dates[day_id] <= end
+            )
+            for month in recent_months
+        }
+        best_month = max(recent_months, key=lambda month: (month_counts[month], month))
         annual_start = end - timedelta(days=364)
         if min(self.day_dates.values()) > annual_start:
             raise ValueError("The contribution calendar does not cover the last 365 days")
@@ -92,7 +101,7 @@ class CalendarParser(HTMLParser):
             count > 0 for day_id, count in self.day_counts.items()
             if recent_start <= self.day_dates[day_id] <= end
         )
-        return sum(month_counts), annual_active, recent_active, start, annual_start, end
+        return month_counts[best_month], annual_active, recent_active, best_month, annual_start, end
 
 
 def fetch_metrics() -> tuple[int, int, int, date, date, date]:
@@ -110,13 +119,13 @@ def fetch_metrics() -> tuple[int, int, int, date, date, date]:
     return parser.metrics()
 
 
-def card(total: int, active: int, recent_active: int, start: date, annual_start: date, end: date, mobile: bool) -> str:
+def card(total: int, active: int, recent_active: int, best_month: date, annual_start: date, end: date, mobile: bool) -> str:
     total_label = f"{total:,}".replace(",", " ")
     end_label = end.strftime("%d.%m.%Y")
-    month_label = MONTHS[start.month - 1]
+    month_label = MONTHS[best_month.month - 1]
     description = escape(
-        f"Du 1er {month_label} au {end.day} {MONTHS[end.month - 1]} {end.year} : "
-        f"{total_label} contributions GitHub ce mois-ci. "
+        f"Meilleur mois des trois derniers : {total_label} contributions GitHub "
+        f"en {month_label} {best_month.year}. "
         f"Du {annual_start.day} {MONTHS[annual_start.month - 1]} {annual_start.year} "
         f"au {end.day} {MONTHS[end.month - 1]} {end.year} : {active} jours actifs. "
         f"{recent_active} jours actifs sur les 60 derniers jours. "
@@ -125,10 +134,10 @@ def card(total: int, active: int, recent_active: int, start: date, annual_start:
     if mobile:
         width, height = 600, 390
         body = f"""<text x="32" y="47" fill="#d9cda4" font-size="21" letter-spacing="1">ACTIVITÉ GITHUB</text>
-<text x="568" y="47" fill="#aaa9ad" font-size="16" text-anchor="end">{month_label.upper()} {start.year}</text>
+<text x="568" y="47" fill="#aaa9ad" font-size="16" text-anchor="end">MEILLEUR MOIS SUR 3</text>
 <path d="M32 67h536" stroke="#363638"/>
 <text x="30" y="163" fill="#f4f3ef" font-size="87" font-weight="600" letter-spacing="-3">{total_label}</text>
-<text x="34" y="201" fill="#c7c7c8" font-size="25">contributions en {month_label}</text>
+<text x="34" y="201" fill="#c7c7c8" font-size="25">contributions en {month_label} {best_month.year}</text>
 <path d="M32 223h536" stroke="#363638"/>
 <text x="32" y="303" fill="#f4f3ef" font-size="67" font-weight="600" letter-spacing="-2">{active}</text>
 <text x="34" y="341" fill="#c7c7c8" font-size="25">jours actifs sur 12 mois</text>
@@ -136,16 +145,16 @@ def card(total: int, active: int, recent_active: int, start: date, annual_start:
     else:
         width, height = 1100, 260
         body = f"""<text x="42" y="47" fill="#d9cda4" font-size="14" letter-spacing="1.7">ACTIVITÉ GITHUB</text>
-<text x="1058" y="47" fill="#aaa9ad" font-size="14" text-anchor="end">{month_label.upper()} {start.year} · RELEVÉ AU {end_label}</text>
+<text x="1058" y="47" fill="#aaa9ad" font-size="14" text-anchor="end">MEILLEUR MOIS SUR 3 · RELEVÉ AU {end_label}</text>
 <text x="40" y="156" fill="#f4f3ef" font-size="94" font-weight="600" letter-spacing="-3.5">{total_label}</text>
-<text x="45" y="195" fill="#c7c7c8" font-size="24">contributions en {month_label}</text>
+<text x="45" y="195" fill="#c7c7c8" font-size="24">contributions en {month_label} {best_month.year}</text>
 <path d="M652 73v137" stroke="#363638"/>
 <text x="711" y="155" fill="#f4f3ef" font-size="80" font-weight="600" letter-spacing="-2">{active}</text>
 <text x="716" y="194" fill="#c7c7c8" font-size="23">jours actifs sur 12 mois</text>
 <path d="M42 219h1016" stroke="#363638"/>
 <text x="43" y="245" fill="#d9cda4" font-size="18">Rythme récent · {recent_active} jours actifs sur les 60 derniers jours · mise à jour automatique</text>"""
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
-<title id="title">Activité GitHub du mois en cours, des 12 derniers mois et des 60 derniers jours</title>
+<title id="title">Meilleur mois GitHub des trois derniers, jours actifs sur 12 mois et 60 jours</title>
 <desc id="desc">{description}</desc>
 <rect x=".5" y=".5" width="{width - 1}" height="{height - 1}" rx="18" fill="#111113" stroke="#343437"/>
 <g font-family="Arial, Helvetica, sans-serif">
@@ -156,9 +165,9 @@ def card(total: int, active: int, recent_active: int, start: date, annual_start:
 
 
 def main() -> None:
-    total, active, recent_active, start, annual_start, end = fetch_metrics()
-    desktop_svg = card(total, active, recent_active, start, annual_start, end, False)
-    mobile_svg = card(total, active, recent_active, start, annual_start, end, True)
+    total, active, recent_active, best_month, annual_start, end = fetch_metrics()
+    desktop_svg = card(total, active, recent_active, best_month, annual_start, end, False)
+    mobile_svg = card(total, active, recent_active, best_month, annual_start, end, True)
     version = hashlib.sha256((desktop_svg + mobile_svg).encode("utf-8")).hexdigest()[:12]
 
     readme_path = ROOT / "README.md"
@@ -174,7 +183,7 @@ def main() -> None:
     (ROOT / "profile-metrics.svg").write_text(desktop_svg, encoding="utf-8")
     (ROOT / "profile-metrics-mobile.svg").write_text(mobile_svg, encoding="utf-8")
     readme_path.write_text(readme, encoding="utf-8")
-    print(f"{total} monthly contributions ({start} to {end}), {active} active days ({annual_start} to {end}), {recent_active} active days in the last 60 days")
+    print(f"{total} contributions in best recent month ({best_month}), {active} active days ({annual_start} to {end}), {recent_active} active days in the last 60 days")
 
 
 if __name__ == "__main__":
