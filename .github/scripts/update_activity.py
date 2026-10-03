@@ -132,7 +132,7 @@ def card(total: int, active: int, recent_active: int, start: date, annual_start:
 <path d="M32 223h536" stroke="#363638"/>
 <text x="32" y="303" fill="#f4f3ef" font-size="67" font-weight="600" letter-spacing="-2">{active}</text>
 <text x="34" y="341" fill="#c7c7c8" font-size="25">jours actifs sur 12 mois</text>
-<text x="34" y="374" fill="#aaa9ad" font-size="16">Rythme récent : {recent_active} jours actifs sur 60 · {end_label}</text>"""
+<text x="34" y="376" fill="#d9cda4" font-size="24">Rythme récent · {recent_active} jours actifs sur 60</text>"""
     else:
         width, height = 1100, 260
         body = f"""<text x="42" y="47" fill="#d9cda4" font-size="14" letter-spacing="1.7">ACTIVITÉ GITHUB</text>
@@ -143,7 +143,7 @@ def card(total: int, active: int, recent_active: int, start: date, annual_start:
 <text x="711" y="155" fill="#f4f3ef" font-size="80" font-weight="600" letter-spacing="-2">{active}</text>
 <text x="716" y="194" fill="#c7c7c8" font-size="23">jours actifs sur 12 mois</text>
 <path d="M42 219h1016" stroke="#363638"/>
-<text x="43" y="245" fill="#aaa9ad" font-size="16">Rythme récent : {recent_active} jours actifs sur les 60 derniers jours · mise à jour automatique</text>"""
+<text x="43" y="245" fill="#d9cda4" font-size="18">Rythme récent · {recent_active} jours actifs sur les 60 derniers jours · mise à jour automatique</text>"""
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
 <title id="title">Activité GitHub du mois en cours, des 12 derniers mois et des 60 derniers jours</title>
 <desc id="desc">{description}</desc>

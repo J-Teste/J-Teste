@@ -11,6 +11,6 @@
 <text x="711" y="155" fill="#f4f3ef" font-size="80" font-weight="600" letter-spacing="-2">104</text>
 <text x="716" y="194" fill="#c7c7c8" font-size="23">jours actifs sur 12 mois</text>
 <path d="M42 219h1016" stroke="#363638"/>
-<text x="43" y="245" fill="#aaa9ad" font-size="16">Rythme récent : 46 jours actifs sur les 60 derniers jours · mise à jour automatique</text>
+<text x="43" y="245" fill="#d9cda4" font-size="18">Rythme récent · 46 jours actifs sur les 60 derniers jours · mise à jour automatique</text>
 </g>
 </svg>
