@@ -13,6 +13,8 @@
   <a href="https://www.linkedin.com/in/jteste/">LinkedIn ↗</a>
 </p>
 
+<p>Août 2026 a marqué un déclic : je code plus régulièrement, j’expérimente davantage et je construis des projets concrets.</p>
+
 ## Projets
 
 <table>
@@ -35,8 +37,8 @@
 <p>
   <a href="https://github.com/J-Teste#js-contribution-activity-description">
     <picture>
-      <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics-mobile.svg?v=35be06161b9e">
-      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics.svg?v=35be06161b9e" alt="Activité GitHub actualisée automatiquement : contributions du mois en cours et jours actifs sur les 12 derniers mois." width="100%">
+      <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics-mobile.svg?v=c7aad1a413d7">
+      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics.svg?v=c7aad1a413d7" alt="Activité GitHub actualisée automatiquement : contributions du mois en cours, jours actifs sur 12 mois et rythme sur 60 jours." width="100%">
     </picture>
   </a>
 </p>
