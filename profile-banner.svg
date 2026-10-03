@@ -1,53 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
   <title id="title">Jason TESTÉ — développeur full-stack</title>
-  <desc id="desc">Bannière noire minimaliste inspirée du portfolio de Jason, avec son nom, son métier, Mulhouse et un motif d’étoiles reliées.</desc>
+  <desc id="desc">Développeur full-stack et automatisation chez Drivecase, à Mulhouse.</desc>
   <defs>
-    <radialGradient id="glow" cx="82%" cy="65%" r="55%">
-      <stop offset="0" stop-color="#28282a" stop-opacity=".66" />
+    <radialGradient id="glow" cx="84%" cy="56%" r="60%">
+      <stop offset="0" stop-color="#2c2c2d" stop-opacity=".65" />
       <stop offset="1" stop-color="#111113" stop-opacity="0" />
     </radialGradient>
   </defs>
-
-  <rect width="1200" height="320" rx="18" fill="#111113" />
-  <rect width="1200" height="320" rx="18" fill="url(#glow)" />
-
-  <!-- Fine constellation lines from the portfolio's background -->
-  <g fill="none" stroke="#bcbcc2" stroke-opacity=".075" stroke-width="1">
-    <path d="M530 290 666 244 735 294 848 208 961 260 1094 183 1164 231" />
-    <path d="M604 320 666 244 742 180 848 208 914 135 1013 160 1094 183 1155 112" />
-    <path d="M735 294 742 180 821 126 914 135 989 76 1080 91 1155 112" />
-    <path d="M848 208 961 260 1034 312 1094 183 1164 231" />
-    <path d="M1013 160 1034 312" />
+  <rect x=".5" y=".5" width="1199" height="339" rx="18" fill="#111113" stroke="#343437" />
+  <rect x="1" y="1" width="1198" height="338" rx="18" fill="url(#glow)" />
+  <g fill="none" stroke="#bcbcc2" stroke-opacity=".11" stroke-width="1">
+    <path d="M720 305 792 243 875 270 931 187 1042 226 1140 128" />
+    <path d="M792 243 819 144 931 187 986 104 1084 91 1140 128" />
+    <path d="M875 270 931 187 1042 226 1094 304" />
   </g>
-  <g fill="#e5e4e0" fill-opacity=".38">
-    <circle cx="530" cy="290" r="2" />
-    <circle cx="666" cy="244" r="2.2" />
-    <circle cx="735" cy="294" r="1.8" />
-    <circle cx="742" cy="180" r="1.8" />
-    <circle cx="821" cy="126" r="2" />
-    <circle cx="848" cy="208" r="2.2" />
-    <circle cx="914" cy="135" r="1.7" />
-    <circle cx="961" cy="260" r="2" />
-    <circle cx="989" cy="76" r="1.7" />
-    <circle cx="1013" cy="160" r="2.2" />
-    <circle cx="1034" cy="312" r="1.7" />
-    <circle cx="1080" cy="91" r="1.7" />
-    <circle cx="1094" cy="183" r="2.2" />
-    <circle cx="1155" cy="112" r="1.8" />
-    <circle cx="1164" cy="231" r="1.7" />
+  <g fill="#e5e4e0" fill-opacity=".42">
+    <circle cx="792" cy="243" r="2" /><circle cx="819" cy="144" r="2" />
+    <circle cx="875" cy="270" r="2" /><circle cx="931" cy="187" r="2" />
+    <circle cx="986" cy="104" r="2" /><circle cx="1042" cy="226" r="2" />
+    <circle cx="1084" cy="91" r="2" /><circle cx="1140" cy="128" r="2" />
   </g>
-
-  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
-    <text x="64" y="142" fill="#f4f3ef" font-size="82" font-weight="500" letter-spacing="-3">Jason TESTÉ</text>
-    <text x="68" y="201" fill="#c7c7c8" font-size="34" font-weight="400" letter-spacing="-.8">Développeur full-stack</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="62" y="128" fill="#f4f3ef" font-size="78" font-weight="500" letter-spacing="-3">Jason TESTÉ</text>
+    <text x="66" y="185" fill="#c7c7c8" font-size="32" letter-spacing="-.8">Développeur full-stack</text>
+    <text x="67" y="231" fill="#d9cda4" font-size="23">Automatisation chez Drivecase</text>
+    <circle cx="70" cy="289" r="3.5" fill="#d9cda4" />
+    <text x="84" y="295" fill="#aaa9ad" font-size="16" letter-spacing="1.5">MULHOUSE · FRANCE</text>
   </g>
-
-  <circle cx="73" cy="253" r="3.5" fill="#d9cda4" />
-  <text x="88" y="258" fill="#a8a8aa" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="2">MULHOUSE · FRANCE</text>
-
-  <!-- Exact crow mark used by the portfolio; inverted to its white-on-black treatment -->
-  <image x="1035" y="194" width="96" height="87" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABXCAMAAADMObAfAAAAKlBMVEVMaXEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABqfk8+AAAADXRSTlMA/APrVBKQdCKt28g3qjbLuQAAAAlwSFlzAAEZQAABGUABgON11AAAAzNJREFUaIG1WQlywzAIBHQiif9/t4NsJ21qxdZhps102nQRywowAZgxAqBYrLVFf6IprDMjcCGjqCVfqr+lRmCNgiOqE+S4OAiCoOA1gOoEg/JEK/Fxh999CMftTyu8ENg/8NWFGLbRbejTPlySTwf1F2gyBxtnXZAS9Il/5FtETA6TOXcnAbycVDfGu/Eg6DyAv14klQkP+buDzYOJwwHYL/jvRCQ/7IDbGaivJrG3jsryFCMKZm/LfhmWM4Ri/MG7ipQWM4SS44JSQVBa589uTUXlFkMTwn8ZNS8Zil+BD+SbEl0QAEFs3WGUvKhLYuP8wrMBEJDHZo2Yj4AqPd9q3FwOCEqzB6xQEUFp0r+CI7rEF5TkHumRixzwFf4URfS1hc1fBIJYp9ArB2FcRXwdwEQtojsETeSYIKbr46uDhwmS/NAU98sBrezAi0oRgbuaEqdUSu0O9t8GVErXJW5KRHQffzAF7j4/KLbbwV2BjjJ0r8RNaIigOWKdWP/TzL0SN3MJrpvkVCXtIgj7JXS7BB3Nsvv8sYcgEzsD6MKXfoJ68X03fkeJEBTuF2gXfu5fenAPfupPcHgY3/ZcANPfxvoqROm/wd7gc/yA7opvpwAHh9G7GsXRQSjcJcgPTnLhqQr6agOX2Kiv3RV0x79OMerX4OPMnTaGkpIGMTaJts+Pm4kIO2djHrnDzTkC3xuK7eS1odYk6880V4VwQ09sg+ckKk7d+nmRAF3by4qPp+Amh+KOWc843au5IGI4ZWaf2Y1O0ogK7m0F0HPrQlMCWJ/Mm7d7N+IUX8wOfmxZNUuSivdJkve2WFtCsHZ/0wB+qagH0QRENU31G3sevM/xtRj/QrCcs1HOcmKfDDOHjTca2vXVNTH9elOs4ueDM02169fPkTlE8R8CJwJXtbT9S8eGuopvW/trmdlIRg0fTt48tC7YxpQKz0EF2Oq1NIK+Fbh68BTi9vneB/1Tpvi1zWPW/FW2eOIDqv/mxQcxrJ/X7h89fKZ3zrxYZ+qNUlnYucXYiUUfISvlVR46dPU/T381Lby8U6L9xizGBwAXXpQ7s1I+cNi7loUjlmccAMT1+D87v4b9/4PwZgAAAABJRU5ErkJggg==" style="filter:invert(1)" preserveAspectRatio="xMidYMid meet" />
-
-  <path d="M44 292H1156" fill="none" stroke="#e6e4df" stroke-opacity=".52" stroke-width="1" />
-  <circle cx="78" cy="292" r="3" fill="#d9cda4" />
+  <image x="1032" y="212" width="106" height="96" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABXCAMAAADMObAfAAAAKlBMVEVMaXEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABqfk8+AAAADXRSTlMA/APrVBKQdCKt28g3qjbLuQAAAAlwSFlzAAEZQAABGUABgON11AAAAzNJREFUaIG1WQlywzAIBHQiif9/t4NsJ21qxdZhps102nQRywowAZgxAqBYrLVFf6IprDMjcCGjqCVfqr+lRmCNgiOqE+S4OAiCoOA1gOoEg/JEK/Fxh999CMftTyu8ENg/8NWFGLbRbejTPlySTwf1F2gyBxtnXZAS9Il/5FtETA6TOXcnAbycVDfGu/Eg6DyAv14klQkP+buDzYOJwwHYL/jvRCQ/7IDbGaivJrG3jsryFCMKZm/LfhmWM4Ri/MG7ipQWM4SS44JSQVBa589uTUXlFkMTwn8ZNS8Zil+BD+SbEl0QAEFs3WGUvKhLYuP8wrMBEJDHZo2Yj4AqPd9q3FwOCEqzB6xQEUFp0r+CI7rEF5TkHumRixzwFf4URfS1hc1fBIJYp9ArB2FcRXwdwEQtojsETeSYIKbr46uDhwmS/NAU98sBrezAi0oRgbuaEqdUSu0O9t8GVErXJW5KRHQffzAF7j4/KLbbwV2BjjJ0r8RNaIigOWKdWP/TzL0SN3MJrpvkVCXtIgj7JXS7BB3Nsvv8sYcgEzsD6MKXfoJ68X03fkeJEBTuF2gXfu5fenAPfupPcHgY3/ZcANPfxvoqROm/wd7gc/yA7opvpwAHh9G7GsXRQSjcJcgPTnLhqQr6agOX2Kiv3RV0x79OMerX4OPMnTaGkpIGMTaJts+Pm4kIO2djHrnDzTkC3xuK7eS1odYk6880V4VwQ09sg+ckKk7d+nmRAF3by4qPp+Amh+KOWc843au5IGI4ZWaf2Y1O0ogK7m0F0HPrQlMCWJ/Mm7d7N+IUX8wOfmxZNUuSivdJkve2WFtCsHZ/0wB+qagH0QRENU31G3sevM/xtRj/QrCcs1HOcmKfDDOHjTca2vXVNTH9elOs4ueDM02169fPkTlE8R8CJwJXtbT9S8eGuopvW/trmdlIRg0fTt48tC7YxpQKz0EF2Oq1NIK+Fbh68BTi9vneB/1Tpvi1zWPW/FW2eOIDqv/mxQcxrJ/X7h89fKZ3zrxYZ+qNUlnYucXYiUUfISvlVR46dPU/T381Lby8U6L9xizGBwAXXpQ7s1I+cNi7loUjlmccAMT1+D87v4b9/4PwZgAAAABJRU5ErkJggg==" style="filter:invert(1)" preserveAspectRatio="xMidYMid meet" />
+  <path d="M46 313H1154" fill="none" stroke="#e6e4df" stroke-opacity=".35" stroke-width="1" />
 </svg>

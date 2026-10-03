@@ -1,9 +1,8 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/e7950efe5639605eddf574e4bf866dfab0aa87e0/profile-banner.svg" alt="Jason TESTÉ — développeur full-stack à Mulhouse" width="100%">
-</p>
-
-<p align="center">
-  Développeur full-stack et automatisation chez <strong>Drivecase</strong>.
+  <picture>
+    <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-banner-mobile.svg?v=ac54e78f5226">
+    <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-banner.svg?v=86928c0fe717" alt="Jason TESTÉ — développeur full-stack et automatisation chez Drivecase, à Mulhouse" width="100%">
+  </picture>
 </p>
 
 <p align="center">
