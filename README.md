@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-banner-mobile.svg?v=f9bafb352f79">
-    <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-banner.svg?v=03d35e769978" alt="Jason TESTÉ — développeur full-stack chez Drivecase à Mulhouse ; applications web et automatisation" width="100%">
+    <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-banner-mobile.svg?v=d68dabd63aef">
+    <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-banner.svg?v=2c20a23ae734" alt="Jason TESTÉ — développeur full-stack chez Drivecase ; applications web et automatisation" width="100%">
   </picture>
 </p>
 
