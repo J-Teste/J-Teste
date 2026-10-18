@@ -60,7 +60,7 @@ class CalendarParser(HTMLParser):
             self.day_counts[self._tooltip_id] = 0 if raw_count == "No" else int(raw_count.replace(",", ""))
             self._tooltip_id = None
 
-    def metrics(self) -> tuple[int, int, date, date, date]:
+    def daily_counts(self) -> dict[date, int]:
         label = " ".join(self.total_text)
         match = re.search(r"([\d,\s\u202f]+)\s+contributions", label)
         if not match:
@@ -69,49 +69,65 @@ class CalendarParser(HTMLParser):
         if len(self.day_dates) < 350 or self.day_dates.keys() != self.day_counts.keys():
             raise ValueError("Contribution calendar is incomplete")
         if sum(self.day_counts.values()) != total:
-            raise ValueError("Daily counts do not match the displayed total")
-        today = datetime.now(ZoneInfo("Europe/Paris")).date()
-        current_month = today.replace(day=1)
-        end = max(self.day_dates.values())
-        if end < current_month:
-            raise ValueError("The current month is not yet in GitHub's calendar")
-        end = min(end, today)
-        recent_months = [current_month]
-        for _ in range(2):
-            recent_months.append((recent_months[-1] - timedelta(days=1)).replace(day=1))
-        month_counts = {
-            month: sum(
-                count for day_id, count in self.day_counts.items()
-                if month.year == self.day_dates[day_id].year
-                and month.month == self.day_dates[day_id].month
-                and self.day_dates[day_id] <= end
+            raise ValueError(
+                f"Daily counts ({sum(self.day_counts.values())}) "
+                f"do not match the displayed total ({total})"
             )
-            for month in recent_months
+        counts = {
+            self.day_dates[day_id]: count for day_id, count in self.day_counts.items()
         }
-        best_month = max(recent_months, key=lambda month: (month_counts[month], month))
-        annual_start = end - timedelta(days=364)
-        if min(self.day_dates.values()) > annual_start:
-            raise ValueError("The contribution calendar does not cover the last 365 days")
-        annual_active = sum(
-            count > 0 for day_id, count in self.day_counts.items()
-            if annual_start <= self.day_dates[day_id] <= end
+        if len(counts) != len(self.day_counts):
+            raise ValueError("Contribution calendar contains duplicate dates")
+        return counts
+
+
+def calculate_metrics(
+    counts: dict[date, int], end: date,
+) -> tuple[int, int, date, date, date]:
+    annual_start = end - timedelta(days=364)
+    if any(annual_start + timedelta(days=offset) not in counts for offset in range(365)):
+        raise ValueError("The contribution calendar does not cover the last 365 days")
+    recent_months = [end.replace(day=1)]
+    for _ in range(2):
+        recent_months.append((recent_months[-1] - timedelta(days=1)).replace(day=1))
+    month_counts = {
+        month: sum(
+            count for day, count in counts.items()
+            if month.year == day.year and month.month == day.month and day <= end
         )
-        return month_counts[best_month], annual_active, best_month, annual_start, end
+        for month in recent_months
+    }
+    best_month = max(recent_months, key=lambda month: (month_counts[month], month))
+    annual_active = sum(
+        count > 0 for day, count in counts.items() if annual_start <= day <= end
+    )
+    return month_counts[best_month], annual_active, best_month, annual_start, end
 
 
 def fetch_metrics() -> tuple[int, int, date, date, date]:
-    request = Request(
-        f"https://github.com/users/{PROFILE}/contributions",
-        headers={
-            "Accept": "text/html",
-            "Accept-Language": "en-US,en;q=0.9",
-            "User-Agent": "J-Teste-profile-metrics/1.0",
-        },
-    )
-    with urlopen(request, timeout=20) as response:
-        parser = CalendarParser()
-        parser.feed(response.read().decode("utf-8"))
-    return parser.metrics()
+    today = datetime.now(ZoneInfo("Europe/Paris")).date()
+    annual_start = today - timedelta(days=364)
+    counts: dict[date, int] = {}
+    # The rolling calendar's heading can disagree with its daily cells. Full
+    # calendar years provide consistent totals; combine them for our 365-day window.
+    for year in range(annual_start.year, today.year + 1):
+        request = Request(
+            f"https://github.com/users/{PROFILE}/contributions"
+            f"?from={year}-01-01&to={year}-12-31",
+            headers={
+                "Accept": "text/html",
+                "Accept-Language": "en-US,en;q=0.9",
+                "User-Agent": "J-Teste-profile-metrics/1.0",
+            },
+        )
+        with urlopen(request, timeout=20) as response:
+            parser = CalendarParser()
+            parser.feed(response.read().decode("utf-8"))
+        year_counts = parser.daily_counts()
+        if any(day.year != year for day in year_counts):
+            raise ValueError(f"GitHub did not return the requested calendar year {year}")
+        counts.update(year_counts)
+    return calculate_metrics(counts, today)
 
 
 def card(total: int, active: int, best_month: date, annual_start: date, end: date, mobile: bool) -> str:
