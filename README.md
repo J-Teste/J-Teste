@@ -20,13 +20,17 @@
 <td width="50%" valign="top">
   <a href="https://www.jasonteste.com/projects/azzaprod"><img src="https://www.jasonteste.com/projects/azzaprod.jpg" alt="AzzaProd — vitrine du studio VFX" width="100%"></a>
   <h3>AzzaProd</h3>
-  <p>Une vitrine bilingue qui met les réalisations du studio au premier plan.</p>
+  <p><strong>Projet client · En ligne et maintenu</strong></p>
+  <p>Donner aux films, aux images et à l’équipe d’un studio VFX la place qu’ils méritent, en français et en anglais.</p>
+  <p>De l’audit UX à la mise en ligne, je prends en charge la conception, le développement et le déploiement sur OVH. Des contenus réutilisables et un formulaire qui préserve la saisie en cas d’échec complètent la refonte.</p>
   <p><a href="https://www.jasonteste.com/projects/azzaprod">Voir le projet ↗</a></p>
 </td>
 <td width="50%" valign="top">
-  <a href="https://www.jasonteste.com/projects/atelier-bozoide"><img src="https://www.jasonteste.com/projects/atelier-bozoide.jpg" alt="Atelier Bozoïde — outil de préparation pour DOFUS" width="100%"></a>
+  <a href="https://www.jasonteste.com/projects/atelier-bozoide"><img src="https://www.jasonteste.com/projects/atelier-bozoide-v05.webp" alt="Atelier Bozoïde 0.5 — nouvel accueil illustré et stations de préparation pour DOFUS" width="100%"></a>
   <h3>Atelier Bozoïde</h3>
-  <p>Un outil pour planifier ses fabrications et comparer ses options dans DOFUS.</p>
+  <p><strong>Produit personnel · v0.5 livrée</strong></p>
+  <p>Savoir quoi fabriquer, quelles ressources réunir et quelle sortie préparer dans DOFUS.</p>
+  <p>Je conçois le produit et développe le parcours complet : interface, API et données. Une version 0.5 livrée pour un usage local, avec simulations séparées et changements confirmés.</p>
   <p><a href="https://www.jasonteste.com/projects/atelier-bozoide">Voir le projet ↗</a></p>
 </td>
 </tr>
