@@ -39,8 +39,8 @@
 <p>
   <a href="https://github.com/J-Teste#js-contribution-activity-description">
     <picture>
-      <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics-mobile.svg?v=571b36bd5be8">
-      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics.svg?v=571b36bd5be8" alt="Activité GitHub actualisée automatiquement : contributions du mois le plus actif parmi les trois derniers mois et jours actifs sur les 12 derniers mois." width="100%">
+      <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics-mobile.svg?v=02a101eaa36c">
+      <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-metrics.svg?v=02a101eaa36c" alt="Activité GitHub actualisée automatiquement : contributions du mois le plus actif parmi les trois derniers mois et jours actifs sur les 12 derniers mois." width="100%">
     </picture>
   </a>
 </p>
