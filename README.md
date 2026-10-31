@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-banner-mobile.svg?v=ymajor-20261009">
-    <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-banner.svg?v=ymajor-20261009" alt="Jason TESTÉ — concepteur développeur full stack chez YMajor ; applications web et automatisation" width="100%">
+    <source media="(max-width: 767px)" srcset="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-banner-mobile.svg?v=py-vo-20261031">
+    <img src="https://raw.githubusercontent.com/J-Teste/J-Teste/main/profile-banner.svg?v=py-vo-20261031" alt="Jason TESTÉ — concepteur développeur full stack chez py-vo ; applications web et automatisation" width="100%">
   </picture>
 </p>
 
